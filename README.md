@@ -1,2 +1,2 @@
 # vrproject
-View ridge project
+View ridge project.

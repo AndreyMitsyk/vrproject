@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7972AAAE-7909-4AA5-9F1F-ED0C95E69F43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VRA.BusinessLayer</RootNamespace>
+    <AssemblyName>VRA.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArtistProcess.cs" />
+    <Compile Include="ArtistProcessDb.cs" />
+    <Compile Include="Converters\DtoConverter.cs" />
+    <Compile Include="CustomerProcess.cs" />
+    <Compile Include="CustomerProcessDb.cs" />
+    <Compile Include="IArtistProcess.cs" />
+    <Compile Include="ICustomerProcess.cs" />
+    <Compile Include="IInterests.cs" />
+    <Compile Include="INationProcess.cs" />
+    <Compile Include="InterestsProcessDb.cs" />
+    <Compile Include="IReportGenerator.cs" />
+    <Compile Include="IReportItemProcess.cs" />
+    <Compile Include="ISettingsProcess.cs" />
+    <Compile Include="ITransactionProcess.cs" />
+    <Compile Include="IWorkProcess.cs" />
+    <Compile Include="NationProcess.cs" />
+    <Compile Include="ProcessFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGenerator.cs" />
+    <Compile Include="ReportItemProcess.cs" />
+    <Compile Include="SettingsProcess.cs" />
+    <Compile Include="TransactionProcessDb.cs" />
+    <Compile Include="WorkProcessDb.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vra.DataAccess\Vra.DataAccess.csproj">
+      <Project>{DC317844-E890-419A-83D2-F7920A0AF3C8}</Project>
+      <Name>Vra.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRA.Dto\VRA.Dto.csproj">
+      <Project>{754C8142-61AD-44EB-B4AD-0AB31E5C0695}</Project>
+      <Name>VRA.Dto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

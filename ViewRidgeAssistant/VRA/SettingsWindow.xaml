@@ -1,0 +1,39 @@
+﻿<Window x:Class="VRA.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SettingsWindow" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow" Closed="Window_Closed" Closing="Window_Closing">
+
+    <Grid Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Сервер" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="База Данных" Grid.Row="1" Grid.Column="0"/>
+        <TextBlock Text="Пользователь" Grid.Row="2" Grid.Column="0"/>
+        <TextBlock Text="Пароль" Grid.Row="3" Grid.Column="0"/>
+        <TextBlock Text="Аутентификация Windows" Grid.Row="4" Grid.Column="0"/>
+
+        <TextBox Name="tbServer" Grid.Row="0" Grid.Column="1" Margin="3"/>
+        <TextBox Name="tbDataBase" Grid.Row="1" Grid.Column="1" Margin="3"/>
+        <TextBox Name="tbUser" Grid.Row="2" Grid.Column="1" Margin="3"/>
+        <TextBox Name="tbPassword" Grid.Row="3" Grid.Column="1" Margin="3"/>
+
+        <Button Name="btnSave" Grid.Row="5" Grid.Column="0" Content="Сохранить" Margin="3" Click="btnSave_Click" />
+        <Button Name="btnCancel" Grid.Row="5" Grid.Column="1" Content="Закрыть" Margin="3" Click="btnCancel_Click" />
+
+        <CheckBox Name="cbAuth" Grid.Row="4" Grid.Column="1" Margin="3" Checked="cbAuth_Checked" Unchecked="cbAuth_Uncheked"/>
+
+    </Grid>
+</Window>

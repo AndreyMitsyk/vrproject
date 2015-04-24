@@ -1,0 +1,293 @@
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Новая папка\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\02 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\03 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddCustomerWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddInterestWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddNationWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\AddNationWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\04 ViewRidgeAssistant +\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\05 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\06 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+C:\Users\Алексей\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+D:\Aleksey\Desktop\Моя VRA\07 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\WPFToolkit.dll
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\ReportWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\ReportWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb

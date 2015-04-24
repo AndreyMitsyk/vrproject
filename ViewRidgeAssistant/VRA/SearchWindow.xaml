@@ -1,0 +1,182 @@
+﻿<Window x:Class="VRA.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SearchWindow" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <TabControl Name ="SearchTab"  Height="auto" >
+
+        <TabItem x:Name ="sCustomer" Header="Поиск Клиента">
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column ="0" Margin="3"  Text="Имя клиента"/>
+                <TextBlock Grid.Row="1" Grid.Column ="0" Margin ="3" Text="Страна"/>
+                <TextBlock Grid.Row="2" Grid.Column ="0" Margin ="3" Text="Город"/>
+
+                <TextBox Name="CustomerName" Grid.Row ="0" Grid.Column="1" Margin="3" Width="256" HorizontalAlignment="Left"/>
+                <TextBox Name ="CustomerCountry" Grid.Row="1" Grid.Column="1" Margin="3" Width="256" HorizontalAlignment="Left"/>
+                <TextBox Name ="CustomerCity" Grid.Row="2" Grid.Column="1" Margin="3" Width="256" HorizontalAlignment="Left"/>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name ="btnSearchCustomer" Content="Принять" Margin="3" Width="70" Click="SearchCustomer" />
+                    <Button x:Name ="btnCancel" Content="Отмена"  Click="CloseForm" Margin="3" Width="70"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+
+        <TabItem x:Name ="sArtist" Header="Поиск Художника">
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column ="0" Margin="3"  Text="Имя художника"/>
+                <TextBlock Grid.Row="1" Grid.Column ="0" Margin ="3" Text="Национальность"/>
+
+                <TextBox Name="ArtistName" Grid.Row ="0" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <ComboBox Name="cbArtistCountry" ItemsSource="{Binding}" DisplayMemberPath="Nationality" Grid.Row="1" Grid.Column="1" Margin="3" Width="200"  HorizontalAlignment="Left"/>
+
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name ="btnSearchArtist" Content="Принять" Margin="3" Width="70" Click="SearchArtist" />
+                    <Button x:Name ="btnCancelA" Content="Отмена" Margin="3" Width="70" Click="CloseForm"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="sWork" Header="Поиск Работ">
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column ="0" Margin="3"  Text="Название"/>
+                <TextBlock Grid.Row="1" Grid.Column ="0" Margin ="3" Text="Имя художника"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Margin="3" Text="Копия"/>
+                <ComboBox x:Name="cbArtistName" ItemsSource="{Binding}" DisplayMemberPath="Name" Grid.Row ="1" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <TextBox Name="WorkTitle" Grid.Row="0" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <TextBox Name="Copy" Grid.Row="2" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name ="btnSearchWork" Content="Принять" Margin="3" Width="70" Click="SearshWork" />
+                    <Button x:Name ="btnCancelW" Content="Отмена" Margin="3" Width="70" Click="CloseForm"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+
+        <TabItem x:Name="tiInterests" Header="Поиск по интересам">
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column ="0" Margin="3"  Text="Имя Клиента"/>
+                <TextBlock Grid.Row="1" Grid.Column ="0" Margin ="3" Text="Имя художника"/>
+
+                <TextBox x:Name="tbICustomerName"  Grid.Row="0" Grid.Column="1" Width="200" HorizontalAlignment="Left"></TextBox>
+                <TextBox x:Name="tbIArtistName"  Grid.Row="1" Grid.Column="1" Width="200" HorizontalAlignment="Left"></TextBox>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name ="btnSearchInterest" Content="Принять" Margin="3" Width="70" Click="SearchInterests" />
+                    <Button x:Name ="btnCancelI" Content="Отмена"  Click="CloseForm" Margin="3" Width="70"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+
+        <TabItem x:Name="sTransaction" Header="Поиск Транзакций">
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <RadioButton x:Name="RBcustomerSearch" Grid.Row="0" Grid.Column ="0" Margin="3" Content="Поиск по клиенту" Checked="RBcustomerSearch_Checked" />
+                <RadioButton x:Name="RBworkSearch" Grid.Row="1" Grid.Column ="0" Margin ="3" Content="Поиск по картине" Checked="RBartistSearch_Checked" />
+                <RadioButton x:Name="RBpriceSearch" Grid.Row="2" Grid.Column="0" Margin="3" Content="Поиск по цене продажи" Checked="RBpriceSearch_Checked" />
+                <RadioButton x:Name="RBsaleSearch" Grid.Row="3" Grid.Column="0" Margin="3" Content="Дата продажи с : " Checked="RBsaleSearch_Checked" />
+                <TextBlock Grid.Row="3" Grid.Column="2" Margin="3" Text="по : "/>
+                <RadioButton x:Name="RBacquiredSearch" Grid.Row="4" Grid.Column="0" Margin="3" Content="Дата покупки с : " Checked="RBacquiredSearch_Checked" />
+                <TextBlock Grid.Row="4" Grid.Column="2" Margin="3" Text="по : "/>
+                <ComboBox x:Name="cbWorkNameT" ItemsSource="{Binding}" DisplayMemberPath="Title" Grid.Row ="1" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Text=" * Вводится нижняя граница"/>
+                <ComboBox Name="cbCustomerNameT" ItemsSource="{Binding}" DisplayMemberPath="Name" Grid.Row="0" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                
+                <TextBox Name="tbSalesPrice" Grid.Row="2" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+
+                <DatePicker x:Name="dpStartSaleDate" Grid.Row="3" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <DatePicker x:Name="dpStoptSaleDate" Grid.Row="3" Grid.Column="3" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <DatePicker x:Name="dpStartDateAcquired" Grid.Row="4" Grid.Column="1" Margin="3" Width="200" HorizontalAlignment="Left"/>
+                <DatePicker x:Name="dpStoptDateAcquired" Grid.Row="4" Grid.Column="3" Margin="3" Width="200" HorizontalAlignment="Left"/>
+
+                <StackPanel Grid.Row="6" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right">
+
+                    <Button x:Name ="btnSearchTrans" Content="Принять" Margin="3" Width="70" Click="SearchTransaction" />
+                    <Button x:Name ="btnCancelT" Content="Отмена" Margin="3" Width="70" Click="CloseForm"/>
+                    
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        
+    </TabControl>
+</Window>

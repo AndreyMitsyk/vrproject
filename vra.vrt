@@ -1,0 +1,20 @@
+<!-- THIS IS VIEW RIDGE ASSISTANT REPORT HTML TEMPLATE --!>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<html>
+	<head>
+		<style type="text/css">
+			td { font-family: Verdana, Arial; font-size: 12; font-weight: normal; color: #303030; border:1px solid gray; padding: 5px 5px 5px 5px;}
+			td.light { font-family: Verdana, Arial; font-size: 12; font-weight: normal; color: #303030; border:1px solid gray;padding: 5px 5px 5px 5px;}
+			html,body { height:100%; background-color: #FFFFFF; }
+		</style>
+	</head>
+		
+	<body>
+		<br>
+		<div style="text-align: center;">
+			<table align="center" style="position:absolute;border:1px solid black;width:80%;">
+			[VRA_TABLE_REPORT]
+			</table>	
+		</div>
+	</body>
+</html>

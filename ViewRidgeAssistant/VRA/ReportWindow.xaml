@@ -1,0 +1,56 @@
+﻿<Window x:Class="VRA.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Графический отчет" MinHeight="500" MinWidth="800"  Height="500" Width="800" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="586*" />
+            <ColumnDefinition Width="165" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" Height="66" HorizontalAlignment="Left" Name="stackPanel1" VerticalAlignment="Top" Width="156" Margin="5,0,0,0">
+            <TextBlock FontStyle="Italic" HorizontalAlignment="Center"> Вид графика:</TextBlock>
+            <RadioButton Content="Гистограмма" Height="16" Name="radioGist" Margin="3" IsChecked="True" />
+            <RadioButton Content="Линейный" Height="16" Name="radioSpline" Margin="3" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Height="62" HorizontalAlignment="Left" Margin="5,1,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="156">
+            <TextBlock FontStyle="Italic" HorizontalAlignment="Center">Отобразить:</TextBlock>
+            <RadioButton Content="Сумма проданных" Height="16" Name="radioSales" IsChecked="True"  Margin="3"/>
+            <RadioButton Content="Сумма купленных" Height="16" Name="radioPurchase"  Margin="3"/>
+        </StackPanel>
+        <TextBlock Grid.Column="1" Grid.Row="2" Height="auto" HorizontalAlignment="Center" Margin="62,3,47,0" Name="textBlock1" Text="За период:" VerticalAlignment="Top" Width="auto" TextAlignment="Center" FontStyle="Italic" />
+        <TextBlock Grid.Column="1" Grid.Row="2" Height="16" HorizontalAlignment="Left" Margin="19,29,0,0" Name="textBlock2" Text="C" VerticalAlignment="Top" Width="26" />
+        <DatePicker Grid.Column="1" Grid.Row="2" Height="25" HorizontalAlignment="Left" Margin="46,25,0,0" Name="datePicker1" VerticalAlignment="Top" Width="115" />
+        <TextBlock Height="16" HorizontalAlignment="Left" Margin="19,67,0,0" Name="textBlock3" Text="По" VerticalAlignment="Top" Width="26" Grid.Column="1" Grid.Row="2" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="46,63,0,0" Name="datePicker2" VerticalAlignment="Top" Width="115" Grid.Column="1" Grid.Row="2" />
+        <StackPanel Grid.Column="1" Grid.Row="3" Height="95" HorizontalAlignment="Left" Margin="7,8,0,0" Name="stackPanel3" VerticalAlignment="Top" Width="154">
+            <TextBlock TextAlignment="Center" FontStyle="Italic"> С шагом :</TextBlock>
+            <RadioButton Content="День" Height="16" Name="radioDay" Margin="3" IsChecked="True" />
+            <RadioButton Content="Месяц" Height="16" Name="radioMounth" Margin="3" />
+            <RadioButton Content="Год" Height="16" Name="radioYear" Margin="3" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Height="33" HorizontalAlignment="Right" Name="stackPanel4" VerticalAlignment="Bottom" Width="76" Orientation="Horizontal">
+            <Button Content="Принять" Height="23" Name="btn_accept" Width="75" FlowDirection="LeftToRight" Click="btn_accept_Click" />
+        </StackPanel>
+
+        <chartingToolkit:Chart Grid.RowSpan="4" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="ChartArea"  VerticalAlignment="Stretch" Height="auto" Width="auto" MinHeight="200" MinWidth="300"  >
+
+            <chartingToolkit:Chart.LegendStyle>
+                <Style TargetType="Control">
+                    <Setter Property="Width" Value="0"/>
+                    <Setter Property="Height" Value="0"/>
+                </Style>
+            </chartingToolkit:Chart.LegendStyle>
+
+            <chartingToolkit:ColumnSeries Name="ColumnChart" DependentValuePath="count" IndependentValuePath="date" ItemsSource="{Binding Path= collection}" Visibility="Hidden"  />
+            <chartingToolkit:LineSeries Name="LineChart" DependentValuePath="count" IndependentValuePath="date" ItemsSource="{Binding Path= collection}" Visibility="Hidden" />
+
+
+        </chartingToolkit:Chart>
+    </Grid>
+</Window>

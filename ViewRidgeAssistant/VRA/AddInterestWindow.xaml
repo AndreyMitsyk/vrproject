@@ -1,0 +1,32 @@
+﻿<Window x:Class="VRA.AddInterestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление интереса" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Клиент *" Grid.Row="0" Grid.Column="0" Margin="3"/>
+        <TextBlock Text="Художник *" Grid.Row="1" Grid.Column="0" Margin="3"/>
+
+
+        <ComboBox x:Name="cbCustomer" Grid.Row="0" Grid.Column="1" Margin="3" ItemsSource="{Binding}" DisplayMemberPath="Name" />
+        <ComboBox x:Name="cbArtist" Grid.Row="1" Grid.Column="1" Margin="3" ItemsSource="{Binding}" DisplayMemberPath="Name" />
+
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" FontStyle="Italic" FontSize="11" TextAlignment="Center"> обязательные для заполнение поля помечены "*"</TextBlock>
+        <Button x:Name="btnSave" Grid.Row="3" Grid.Column="0" Content="Сохранить" Margin="3" Click="btnSave_Click" />
+        <Button x:Name="btnCancel" Grid.Row="3" Grid.Column="1" Content="Отмена" Margin="3" Click="btnCancel_Click_1" />
+    </Grid>
+</Window>

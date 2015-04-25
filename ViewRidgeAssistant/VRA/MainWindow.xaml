@@ -69,15 +69,14 @@
         </DataGrid>
         <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.ColumnSpan="3">
             <MenuItem Name="DataBase" Header="База данных">
+                <MenuItem Name="dataBaseP" Header="Создать соединение с новой БД" Click="Path_Click"/>
                 <MenuItem Name="dataBaseS" Header="Настроить соединение с имеющейся БД" Click="btnDatabase_Click"/>
             </MenuItem>
             <MenuItem Name="Reports" Header="Отчеты">
                 <MenuItem Name="ExelExporterButton" Header="Экспорт таблицы Excel" Click="ExelExporterButton_Click" />
-                <MenuItem Name="HtmlExporterBurron" Header="Экспорт таблицы в html" Click="HtmlExporterButton_Click" />
                 <MenuItem Name="HtmlWorksInGalleryButton" Header="Прайс-лист работ" Click="HtmlWorksInGalleryButton_Click" />
                 <MenuItem Name="GraphReportButton" Header="Отчет по продажам" Click="GraphReportButton_Click" />
             </MenuItem>
-            <MenuItem Name = "About" Header="О программе" ></MenuItem>
         </Menu>
         <StatusBar Name="statusBar" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="1,0"  VerticalAlignment="Bottom" Height="30">
             <Label Name ="statusLabel" Content="Работа с таблицей:" Visibility="Visible">

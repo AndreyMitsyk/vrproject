@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\
 VRA
 none
 false
 DEBUG;TRACE
-D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\App.xaml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\App.xaml
 10-1826965478
 
 141487173619
-161571568471
+16-1272841205
 AddArtistWindow.xaml;AddCustomerWindow.xaml;AddInterestWindow.xaml;AddNationWindow.xaml;AddTransactionWindow.xaml;AddWorkWindow.xaml;MainWindow.xaml;ReportWindow.xaml;SearchWindow.xaml;SettingsWindow.xaml;
 
 False

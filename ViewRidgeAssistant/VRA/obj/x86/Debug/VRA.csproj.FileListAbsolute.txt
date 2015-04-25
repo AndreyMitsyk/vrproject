@@ -291,3 +291,41 @@ D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Proper
 D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache
 D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
 D:\Aleksey\Desktop\Моя VRA\08 ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe.config
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.exe
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.pdb
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.exe
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.pdb
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.dll
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.dll
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.dll
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\WPFToolkit.dll
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.BusinessLayer.pdb
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\Vra.DataAccess.pdb
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\bin\Debug\VRA.Dto.pdb
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csprojResolveAssemblyReference.cache
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\ReportWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.baml
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddArtistWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddCustomerWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddInterestWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddNationWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddTransactionWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\AddWorkWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\MainWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\ReportWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\SearchWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\SettingsWindow.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\App.g.cs
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA_MarkupCompile.cache
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.g.resources
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.Properties.Resources.resources
+D:\Aleksey\Desktop\Моя VRA\vraproject\ViewRidgeAssistant\VRA\obj\x86\Debug\VRA.csproj.GenerateResource.Cache

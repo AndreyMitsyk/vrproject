@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using VRA.Dto;
 using Vra.DataAccess;
 using VRA.BusinessLayer;
+using Microsoft.Win32;
 
 namespace VRA
 {
@@ -714,6 +715,20 @@ namespace VRA
             window.ShowDialog();
         }
 
+        private void Path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog settingsDialog = new OpenFileDialog();
+            settingsDialog.Filter = "Файлы базы данных(*.mdf)|*.mdf";
+            settingsDialog.CheckFileExists = true;
+            settingsDialog.Multiselect = false;
+
+            if (settingsDialog.ShowDialog() == true)
+            {
+                SettingsDao _settings = DaoFactory.GetSettingsDao();
+                _settings.SetSettings(settingsDialog.FileName);
+            }
+        }
+
         private void ExelExporterButton_Click(object sender, RoutedEventArgs e)
         {
             List<object> grid = null;
@@ -742,65 +757,6 @@ namespace VRA
             }
 
             ProcessFactory.GetReport().fillExcelTableByType(grid, status);
-        }
-
-        private void HtmlExporterButton_Click(object sender, RoutedEventArgs e)
-        {
-            String rep = "";
-
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.DefaultExt = ".vrt";
-            dlg.Filter = "View Ridge Assistant Template files|*.vrt";
-
-            Nullable<bool> result = dlg.ShowDialog();
-
-            if (result == true)
-            {
-                System.IO.StreamReader sr = new System.IO.StreamReader(dlg.FileName);
-                rep = sr.ReadToEnd();
-                sr.Close();
-            }
-            else
-            {
-                return;
-            }
-
-            dlg = null;
-
-            List<object> grid = null;
-
-            switch (status)
-            {
-                case "Customer":
-                    grid = this.dgCustomers.ItemsSource.Cast<object>().ToList();
-                    break;
-                case "Artist":
-                    grid = this.dgArtists.ItemsSource.Cast<object>().ToList();
-                    break;
-                case "Work":
-                    grid = this.dgWork.ItemsSource.Cast<object>().ToList();
-                    break;
-                case "Trans":
-                    grid = this.dgTrans.ItemsSource.Cast<object>().ToList();
-                    break;
-                case "Interests":
-                    grid = this.dgInterests.ItemsSource.Cast<object>().ToList();
-                    break;
-            }
-
-            string full_rep = ProcessFactory.GetReport().fillHtmlTableByType(grid, rep, status);
-
-            Microsoft.Win32.SaveFileDialog sdlg = new Microsoft.Win32.SaveFileDialog();
-            sdlg.DefaultExt = ".html";
-            sdlg.Filter = "Html Ducoments (.html)|*.html";
-            if (sdlg.ShowDialog() == true)
-            {
-                string filename = sdlg.FileName;
-                StreamWriter sw = new StreamWriter(filename);
-                sw.WriteLine(full_rep);
-                sw.Close();
-            }
-            sdlg = null;
         }
 
         private void HtmlWorksInGalleryButton_Click(object sender, RoutedEventArgs e)

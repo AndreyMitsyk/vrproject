@@ -754,6 +754,10 @@ namespace VRA
                 case "Interests":
                     grid = this.dgInterests.ItemsSource.Cast<object>().ToList();
                     break;
+
+                case "Nations":
+                    grid = this.dgNations.ItemsSource.Cast<object>().ToList();
+                    break;
             }
 
             ProcessFactory.GetReport().fillExcelTableByType(grid, status);

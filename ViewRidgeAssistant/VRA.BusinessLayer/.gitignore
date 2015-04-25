@@ -1,0 +1,5 @@
+/obj/
+/bin/
+*.csproj.user
+*.csproj.DotSettings.user
+*.db

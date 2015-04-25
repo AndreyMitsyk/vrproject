@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess.Entities;
 
 namespace Vra.DataAccess
@@ -22,7 +19,7 @@ namespace Vra.DataAccess
         /// Получить список всех художников в базе
         /// </summary>
         /// <returns>список всех художников в базе</returns>
-        IList<Artist> GetAll();
+        IEnumerable<Artist> GetAll();
 
         /// <summary>
         /// Добавить художника в базу
@@ -42,6 +39,6 @@ namespace Vra.DataAccess
         /// <param name="id">id удаляемого художника</param>
         void Delete(int id);
 
-        IList<Artist> SearchArtists(string Name, string Nation);
+        IEnumerable<Artist> SearchArtists(string Name, string Nation);
     }
 }

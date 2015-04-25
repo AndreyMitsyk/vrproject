@@ -1,15 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VRA.BusinessLayer;
 using VRA.Dto;
 
@@ -18,7 +10,7 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для SearchWindow.xaml
     /// </summary>
-    public partial class SearchWindow : Window
+    public partial class SearchWindow
     {
         private readonly IList<NationDto> AllowNations = ProcessFactory.GetNationProcess().GetList();
         private readonly IList<ArtistDto> AllowArtists = ProcessFactory.GetArtistProcess().GetList();
@@ -30,7 +22,7 @@ namespace VRA
         public IList<InterestsDto> FindedInterests;
         public IList<TransactionDto> FindedTransactions;
 
-        public bool exec = false;
+        public bool exec;
 
         public SearchWindow()
         {
@@ -98,21 +90,21 @@ namespace VRA
 
         private void SearchCustomer(object sender, RoutedEventArgs e)
         {
-            this.FindedCustomers = ProcessFactory.GetCustomerProcess().SearchCustomer(this.CustomerName.Text.ToString(), this.CustomerCountry.Text.ToString(), this.CustomerCity.Text.ToString());
+            this.FindedCustomers = ProcessFactory.GetCustomerProcess().SearchCustomer(this.CustomerName.Text, this.CustomerCountry.Text, this.CustomerCity.Text);
             this.exec = true;
             this.Close();
         }
 
         private void SearchArtist(object sender, RoutedEventArgs e)
         {
-            this.FindedArtists = ProcessFactory.GetArtistProcess().SearchArtist(this.ArtistName.Text.ToString(), this.cbArtistCountry.Text);
+            this.FindedArtists = ProcessFactory.GetArtistProcess().SearchArtist(this.ArtistName.Text, this.cbArtistCountry.Text);
             this.exec = true;
             this.Close();
         }
 
         private void SearshWork(object sender, RoutedEventArgs e)
         {
-            this.FindedWorks = ProcessFactory.GetWorkProcess().SearchWork(this.WorkTitle.Text.ToString(), this.cbArtistName.Text.ToString(), this.Copy.Text.ToString());
+            this.FindedWorks = ProcessFactory.GetWorkProcess().SearchWork(this.WorkTitle.Text, this.cbArtistName.Text, this.Copy.Text);
             this.exec = true;
             this.Close();
         }
@@ -140,7 +132,7 @@ namespace VRA
                     CustomerDto D = (CustomerDto)this.cbCustomerNameT.SelectedItem;
                     transactions = from T in AllTransactions where (T.Customer.Id == D.Id) select T;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Выберите клиента для поиска!"); return;
                 }
@@ -153,7 +145,7 @@ namespace VRA
                     WorkDto W = (WorkDto)this.cbWorkNameT.SelectedItem;
                     transactions = from T in AllTransactions where (T.Work.Id == W.Id) select T;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Выберите картину для поиска!"); return;
                 }
@@ -165,7 +157,7 @@ namespace VRA
                 {
                     transactions = from T in AllTransactions where (T.SalesPrice >= Convert.ToDecimal(this.tbSalesPrice.Text)) select T;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Введите нижнюю границу цены для поиска!"); return;
                 }
@@ -177,7 +169,7 @@ namespace VRA
                 {
                     transactions = from T in AllTransactions where (T.DateAcquired >= this.dpStartDateAcquired.DisplayDate && T.DateAcquired <= this.dpStoptDateAcquired.DisplayDate) select T;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Введите пределы для поиска по дате!");
                 }
@@ -189,13 +181,13 @@ namespace VRA
                 {
                     transactions = from T in AllTransactions where (T.PurchaseDate >= this.dpStartSaleDate.DisplayDate & T.PurchaseDate <= this.dpStoptSaleDate.DisplayDate) select T;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Введите пределы для поиска по дате!");
                 }
             }
 
-            this.FindedTransactions = transactions.ToList();
+            if (transactions != null) this.FindedTransactions = transactions.ToList();
             this.exec = true;
             this.Close();
 

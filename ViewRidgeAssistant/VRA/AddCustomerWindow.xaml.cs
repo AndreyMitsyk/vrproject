@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using VRA.Dto;
 using VRA.BusinessLayer;
@@ -19,7 +9,7 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для AddCustomerWindow.xaml
     /// </summary>
-    public partial class AddCustomerWindow : Window
+    public partial class AddCustomerWindow
     {
         private int _id;
 
@@ -44,7 +34,7 @@ namespace VRA
             tbCountry.Text = Customer.Country;
             tbHouse.Text = Customer.HouseNumber;
 
-            IList<InterestsDto> Interests = ProcessFactory.GetInterestsProcess().GetList();
+            IEnumerable<InterestsDto> Interests = ProcessFactory.GetInterestsProcess().GetList();
 
             IList<ArtistDto> Artist = ProcessFactory.GetArtistProcess().GetList();
 
@@ -56,7 +46,7 @@ namespace VRA
                     {
                         if (artist.Id == c.Artist.Id)
                         {
-                            this.interestsList.Items.Add(artist.Name.ToString());
+                            this.interestsList.Items.Add(artist.Name);
                         }
                     }
                 }

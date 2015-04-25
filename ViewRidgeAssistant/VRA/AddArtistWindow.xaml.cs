@@ -1,15 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VRA.Dto;
 using VRA.BusinessLayer;
 
@@ -18,7 +10,7 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для AddArtistWindow.xaml
     /// </summary>
-    public partial class AddArtistWindow : Window
+    public partial class AddArtistWindow
     {
         public AddArtistWindow()
         {
@@ -97,13 +89,15 @@ namespace VRA
             }
 
             //Создаем объект для передачи данных
-            ArtistDto artist = new ArtistDto();
+            ArtistDto artist = new ArtistDto
+            {
+                Name = tbName.Text,
+                BirthYear = birth,
+                DeceaseYear = death,
+                Nation = cbNationality.SelectedItem as NationDto
+            };
 
             //Заполняем объект данными
-            artist.Name = tbName.Text;
-            artist.BirthYear = birth;
-            artist.DeceaseYear = death;
-            artist.Nation = cbNationality.SelectedItem as NationDto;
 
             //Именно тут запрашиваем реализованную ранее задачу по работе с художниками
             IArtistProcess artistProcess = ProcessFactory.GetArtistProcess();

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Vra.DataAccess.Entities;
 
 namespace Vra.DataAccess
@@ -15,7 +13,7 @@ namespace Vra.DataAccess
         /// <param name="start"> Дата начала периода</param>
         /// <param name="end">Дата конца</param>
         /// <returns>Report о цене, количестве и дате</returns>
-        IList<Report> getPurchasedPerDays(DateTime start, DateTime end);
+        IEnumerable<Report> getPurchasedPerDays(DateTime start, DateTime end);
 
         /// <summary>
         /// Возвращает все купленные картины с периодом 
@@ -24,7 +22,7 @@ namespace Vra.DataAccess
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns>Report о цене, количестве и дате</returns>
-        IList<Report> getPurchasedPerMonth(DateTime start, DateTime end);
+        IEnumerable<Report> getPurchasedPerMonth(DateTime start, DateTime end);
 
         /// <summary>
         /// Возвращает все купленные картины с периодом 
@@ -33,7 +31,7 @@ namespace Vra.DataAccess
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns>Report о цене, количестве и дате</returns>
-        IList<Report> getPurchasedPerYear(DateTime start, DateTime end);
+        IEnumerable<Report> getPurchasedPerYear(DateTime start, DateTime end);
 
         /// <summary>
         /// Возвращает все проданные за
@@ -43,7 +41,7 @@ namespace Vra.DataAccess
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns>Report о цене, количестве и дате</returns>
-        IList<Report> getSalesPerDay(DateTime start, DateTime end);
+        IEnumerable<Report> getSalesPerDay(DateTime start, DateTime end);
 
         /// <summary>
         /// Возвращает все проданные за
@@ -53,7 +51,7 @@ namespace Vra.DataAccess
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns>Report о цене, количестве и дате</returns>
-        IList<Report> getSalesPerMonth(DateTime start, DateTime end);
+        IEnumerable<Report> getSalesPerMonth(DateTime start, DateTime end);
 
         /// <summary>
         /// Возвращает все проданные за
@@ -63,6 +61,6 @@ namespace Vra.DataAccess
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <returns>Report о цене, количестве и дате</returns>
-        IList<Report> getSalesPerYear(DateTime start, DateTime end);
+        IEnumerable<Report> getSalesPerYear(DateTime start, DateTime end);
     }
 }

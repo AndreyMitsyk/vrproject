@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess.Entities;
 
 namespace Vra.DataAccess
@@ -11,9 +8,9 @@ namespace Vra.DataAccess
 
         Customer Get(int? id);
 
-        IList<Customer> GetAll();
+        IEnumerable<Customer> GetAll();
 
-        IList<Customer> SearchCustomer(string Name, string Country, string City);
+        IEnumerable<Customer> SearchCustomer(string Name, string Country, string City);
 
         void Add(Customer customer);
 

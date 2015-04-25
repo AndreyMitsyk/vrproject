@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess.Entities;
 
 namespace Vra.DataAccess
@@ -21,10 +18,6 @@ namespace Vra.DataAccess
         /// <returns></returns>
         Nation Get(int id);
 
-        /// <summary>
-        /// Очистить кеш
-        /// </summary>
-        void Reset();
         void Add(Nation Nation);
         void Delete(int id);
     }

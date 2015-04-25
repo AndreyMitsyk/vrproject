@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using VRA.Dto;
 
 namespace VRA.BusinessLayer
@@ -14,7 +11,6 @@ namespace VRA.BusinessLayer
         /// <returns>Work list in data base</returns>
         IList<WorkDto> GetList();
 
-        WorkDto Get(int id);
         IList<WorkDto> GetListInGallery();
         void Add(WorkDto work);
         void Update(WorkDto work);

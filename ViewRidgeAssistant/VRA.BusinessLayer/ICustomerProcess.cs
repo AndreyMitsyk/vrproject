@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using VRA.Dto;
 
 namespace VRA.BusinessLayer
@@ -13,13 +10,6 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <returns>список Клиентов</returns>
         IList<CustomerDto> GetList();
-
-        /// <summary>
-        /// Возвращает Клиента по его id
-        /// </summary>
-        /// <param name="id">id клиента</param>
-        /// <returns></returns>
-        CustomerDto Get(int id);
 
         /// <summary>
         /// Добавляет Клиента

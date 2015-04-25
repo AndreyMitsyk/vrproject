@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess;
-using VRA.BusinessLayer;
 using VRA.Dto;
 using VRA.BusinessLayer.Converters;
 
@@ -27,11 +23,6 @@ namespace VRA.BusinessLayer
         public IList<CustomerDto> SearchCustomer(string name, string country, string city)
         {
             return DtoConverter.Convert(_customerDao.SearchCustomer(name, country, city));
-        }
-
-        public CustomerDto Get(int id)
-        {
-            return DtoConverter.Convert(_customerDao.Get(id));
         }
 
         public void Add(CustomerDto customer)

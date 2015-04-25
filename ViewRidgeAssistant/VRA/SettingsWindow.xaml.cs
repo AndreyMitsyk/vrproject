@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VRA.BusinessLayer;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace VRA
@@ -19,17 +8,19 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для SettingsWindow.xaml
     /// </summary>
-    public partial class SettingsWindow : Window
+    public partial class SettingsWindow
     {
         private bool recstatus;
-        private bool applySettings = false;
+        private bool applySettings;
 
         private void LoadSettings()
         {
             if (ProcessFactory.GetSettingsProcess().GetSettings() != null)
             {
-                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.ConnectionString = ProcessFactory.GetSettingsProcess().GetSettings();
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
+                {
+                    ConnectionString = ProcessFactory.GetSettingsProcess().GetSettings()
+                };
 
                 this.tbServer.Text = builder.DataSource;
                 this.tbDataBase.Text = builder.InitialCatalog;
@@ -89,7 +80,6 @@ namespace VRA
             else
             {
                 MessageBox.Show("Не удалось записать настройки! Что-то пошло не так");
-                return;
             }
         }
 
@@ -107,7 +97,6 @@ namespace VRA
 
                 if (!ProcessFactory.GetSettingsProcess().SetSettings(this.tbServer.Text, this.tbDataBase.Text, this.tbUser.Text, this.tbPassword.Text))
                 {
-                    return;
                 }
             }
         }

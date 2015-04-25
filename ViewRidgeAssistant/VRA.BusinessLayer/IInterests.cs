@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using VRA.Dto;
 
 namespace VRA.BusinessLayer
 {
     public interface IInterestsProcess
     {
-        IList<InterestsDto> GetList();
+        IEnumerable<InterestsDto> GetList();
         void Add(InterestsDto interest);
         void Delete(InterestsDto interest);
     }

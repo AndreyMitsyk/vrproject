@@ -1,17 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using VRA.Dto;
-using Vra.DataAccess;
 using VRA.BusinessLayer;
 
 namespace VRA
@@ -19,14 +10,12 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для AddWorkWindow.xaml
     /// </summary>
-    public partial class AddWorkWindow : Window
+    public partial class AddWorkWindow
     {
         /// <summary>
         /// Возвращает список художников, имена которых есть в базе.
         /// </summary>
         private readonly IList<ArtistDto> Artists = ProcessFactory.GetArtistProcess().GetList();
-
-        private IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
 
         private IList<WorkDto> FreeForSale = ProcessFactory.GetWorkProcess().GetList();
 
@@ -40,11 +29,11 @@ namespace VRA
             this._id = work.Id;
 
             //заполняем визуальные компоненты для отображения данных
-            tbTitle.Text = work.Title.ToString();
+            tbTitle.Text = work.Title;
 
-            tbCopy.Text = work.Copy != null ? work.Copy : "";
+            tbCopy.Text = work.Copy ?? "";
 
-            tbDescription.Text = (work.Description != null) ? work.Description : "";
+            tbDescription.Text = work.Description ?? "";
 
             foreach (ArtistDto artist in Artists)
             {
@@ -54,16 +43,6 @@ namespace VRA
                     return;
                 }
             }
-        }
-
-        private int GetArtistId(string name)
-        {
-            foreach (ArtistDto artist in Artists)
-            {
-                if (artist.Name == name)
-                    return artist.Id;
-            }
-            return -1;
         }
 
         public AddWorkWindow()
@@ -110,15 +89,19 @@ namespace VRA
                 return;
             }
 
-            WorkDto work = new WorkDto();
-            work.Title = tbTitle.Text;
-            work.Copy = tbCopy.Text;
-            work.Description = tbDescription.Text;
-            work.Artist = (ArtistDto)this.cbArtist.SelectedItem;
+            WorkDto work = new WorkDto
+            {
+                Title = tbTitle.Text,
+                Copy = tbCopy.Text,
+                Description = tbDescription.Text,
+                Artist = (ArtistDto) this.cbArtist.SelectedItem
+            };
 
-            TransactionDto transaction = new TransactionDto();
-            transaction.AcquisitionPrice = Convert.ToDecimal(tbAcquisitionPrice.Text);
-            transaction.DateAcquired = Convert.ToDateTime(this.dpAcuired.Text);
+            TransactionDto transaction = new TransactionDto
+            {
+                AcquisitionPrice = Convert.ToDecimal(tbAcquisitionPrice.Text),
+                DateAcquired = Convert.ToDateTime(this.dpAcuired.Text)
+            };
 
             IWorkProcess workProcess = ProcessFactory.GetWorkProcess();
             ITransactionProcess transProcess = ProcessFactory.GetTransactionProcess();

@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Vra.DataAccess.Entities;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -15,10 +11,9 @@ namespace Vra.DataAccess
         private static Artist LoadArtist(SqlDataReader reader)
         {
             //Создаём пустой объект
-            Artist artist = new Artist();
+            Artist artist = new Artist {ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"))};
             //Заполняем поля объекта в соответствии с названиями полей результирующего
             // набора данных
-            artist.ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"));
             object birth = reader["BirthYear"];
             if (birth != DBNull.Value)
                 artist.BirthYear = Convert.ToInt32(birth);
@@ -57,7 +52,7 @@ namespace Vra.DataAccess
             }
         }
 
-        public IList<Artist> GetAll()
+        public IEnumerable<Artist> GetAll()
         {
             IList<Artist> artists = new List<Artist>();
             using (var conn = GetConnection())
@@ -132,13 +127,13 @@ namespace Vra.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Исключение базы данных: " + ex.ToString(), "WARNING!");
+                        MessageBox.Show("Исключение базы данных: " + ex.Message, "WARNING!");
                     }
                 }
             }
         }
 
-        public IList<Artist> SearchArtists(string Name, string Nation)
+        public IEnumerable<Artist> SearchArtists(string Name, string Nation)
         {
             IList<Artist> artists = new List<Artist>();
             using (var conn = GetConnection())

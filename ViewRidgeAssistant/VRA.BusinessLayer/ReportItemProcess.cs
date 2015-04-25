@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Collections.ObjectModel;
 using VRA.Dto;
 using Vra.DataAccess;
@@ -24,10 +22,7 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto();
-                            repItem.date = d;
-                            repItem.count = 0;
-                            repItem.price = 0;
+                            ReportItemDto repItem = new ReportItemDto {date = d, count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
@@ -52,10 +47,7 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto();
-                            repItem.date = d;
-                            repItem.count = 0;
-                            repItem.price = 0;
+                            ReportItemDto repItem = new ReportItemDto {date = d, count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
@@ -83,10 +75,7 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto();
-                            repItem.date = d;
-                            repItem.count = 0;
-                            repItem.price = 0;
+                            ReportItemDto repItem = new ReportItemDto {date = d, count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
@@ -114,7 +103,7 @@ namespace VRA.BusinessLayer
 
         public ObservableCollection<ReportItemDto> GetPurchased(string period, DateTime start, DateTime stop)
         {
-            IList<ReportItemDto> ReportList = new List<ReportItemDto>();
+            IList<ReportItemDto> ReportList;
 
             switch (period)
             {
@@ -147,7 +136,7 @@ namespace VRA.BusinessLayer
 
         public ObservableCollection<ReportItemDto> GetSaled(string period, DateTime start, DateTime stop)
         {
-            IList<ReportItemDto> ReportList = new List<ReportItemDto>();
+            IList<ReportItemDto> ReportList;
 
             switch (period)
             {

@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using Vra.DataAccess.Entities;
 using System.Windows.Forms;
@@ -14,15 +10,16 @@ namespace Vra.DataAccess
     {
         private static Interests LoadInterest(SqlDataReader reader)
         {
-            Interests interests = new Interests();
-
-            interests.Artist = reader.GetInt32(reader.GetOrdinal("ArtistID"));
-            interests.Customer = reader.GetInt32(reader.GetOrdinal("CustomerID"));
+            Interests interests = new Interests
+            {
+                Artist = reader.GetInt32(reader.GetOrdinal("ArtistID")),
+                Customer = reader.GetInt32(reader.GetOrdinal("CustomerID"))
+            };
 
             return interests;
         }
 
-        public IList<Interests> GetAll()
+        public IEnumerable<Interests> GetAll()
         {
             IList<Interests> interests = new List<Interests>();
             using (var conn = GetConnection())
@@ -77,7 +74,7 @@ namespace Vra.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Исключение базы данных: " + ex.ToString(), "WARNING!");
+                        MessageBox.Show("Исключение базы данных: " + ex.Message, "WARNING!");
                     }
                 }
             }

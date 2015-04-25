@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess.Entities;
 
 namespace Vra.DataAccess
@@ -9,11 +6,11 @@ namespace Vra.DataAccess
     public interface IWorkDao
     {
         Work Get(int id);
-        IList<Work> GetAll();
-        IList<Work> GetInGallery();
+        IEnumerable<Work> GetAll();
+        IEnumerable<Work> GetInGallery();
         void Add(Work work);
         void Update(Work work);
         void Delete(int id);
-        IList<Work> SearchWork(string Title, string Artist, string Copy);
+        IEnumerable<Work> SearchWork(string Title, string Artist, string Copy);
     }
 }

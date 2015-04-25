@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using Vra.DataAccess.Entities;
 
@@ -14,13 +10,14 @@ namespace Vra.DataAccess
         private static Customer LoadCustomer(SqlDataReader reader)
         {
             //Создаём пустой объект
-            Customer customer = new Customer();
+            Customer customer = new Customer
+            {
+                CustomerId = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                Name = reader.GetString(reader.GetOrdinal("Name")),
+                Email = reader.GetString(reader.GetOrdinal("Email"))
+            };
             //Заполняем поля объекта в соответствии с названиями полей результирующего
             // набора данных
-
-            customer.CustomerId = reader.GetInt32(reader.GetOrdinal("CustomerID"));
-            customer.Name = reader.GetString(reader.GetOrdinal("Name"));
-            customer.Email = reader.GetString(reader.GetOrdinal("Email"));
 
             //остальные строки могут иметь значение NULL
 
@@ -79,7 +76,7 @@ namespace Vra.DataAccess
             }
         }
 
-        public IList<Customer> GetAll()
+        public IEnumerable<Customer> GetAll()
         {
             IList<Customer> customers = new List<Customer>();
             using (var conn = GetConnection())
@@ -101,7 +98,7 @@ namespace Vra.DataAccess
             return customers;
         }
 
-        public IList<Customer> SearchCustomer(string Name, string Country, string City)
+        public IEnumerable<Customer> SearchCustomer(string Name, string Country, string City)
         {
             IList<Customer> customers = new List<Customer>();
             using (var conn = GetConnection())

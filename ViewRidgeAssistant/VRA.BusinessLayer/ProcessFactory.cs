@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace VRA.BusinessLayer
+﻿namespace VRA.BusinessLayer
 {
     /// <summary>
     /// Фабрика классов бизнес-логики
     /// </summary>
-    public class ProcessFactory
+    public static class ProcessFactory
     {
         /// <summary>
         /// Возвращает объект, реализующий <seealso cref="IArtistProcess"/>

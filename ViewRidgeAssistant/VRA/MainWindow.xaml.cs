@@ -2,18 +2,8 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using VRA.Dto;
-using Vra.DataAccess;
 using VRA.BusinessLayer;
 using Microsoft.Win32;
 
@@ -22,7 +12,7 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         private string status; // устанавливает с какой таблицей в текущий момент работает юзер
 
@@ -262,8 +252,7 @@ namespace VRA
             switch (status)
             {
                 case "Trans":
-                    AddTransactionWindow window = new AddTransactionWindow();
-                    window.status = "purchase";
+                    AddTransactionWindow window = new AddTransactionWindow {status = "purchase"};
                     window.ShowDialog();
                     btnReloadT_Click();
                     break;
@@ -277,8 +266,7 @@ namespace VRA
             switch (status)
             {
                 case "Trans":
-                    AddTransactionWindow window = new AddTransactionWindow();
-                    window.status = "sale";
+                    AddTransactionWindow window = new AddTransactionWindow {status = "sale"};
                     window.ShowDialog();
                     btnReloadT_Click();
                     break;
@@ -715,21 +703,6 @@ namespace VRA
             window.ShowDialog();
         }
 
-        //не понятно зачем это придумали  - думаю убрать следует *******************************
-        private void Path_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog settingsDialog = new OpenFileDialog();
-            settingsDialog.Filter = "Файлы базы данных(*.mdf)|*.mdf";
-            settingsDialog.CheckFileExists = true;
-            settingsDialog.Multiselect = false;
-
-            if (settingsDialog.ShowDialog() == true)
-            {
-                SettingsDao _settings = DaoFactory.GetSettingsDao();
-                _settings.SetSettings(settingsDialog.FileName);
-            }
-        }//**************************************************************************
-
         private void ExcelExporterButton_Click(object sender, RoutedEventArgs e)
         {
             List<object> grid = null;
@@ -766,13 +739,15 @@ namespace VRA
 
         private void HtmlWorksInGalleryButton_Click(object sender, RoutedEventArgs e)
         {
-            String rep = "";
+            String rep;
 
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.DefaultExt = ".vrt";
-            dlg.Filter = "View Ridge Assistant Template files|*.vrt";
+            OpenFileDialog dlg = new OpenFileDialog
+            {
+                DefaultExt = ".vrt",
+                Filter = "View Ridge Assistant Template files|*.vrt"
+            };
 
-            Nullable<bool> result = dlg.ShowDialog();
+            bool? result = dlg.ShowDialog();
 
             if (result == true)
             {
@@ -785,13 +760,9 @@ namespace VRA
                 return;
             }
 
-            dlg = null;
-
             string full_rep = ProcessFactory.GetReport().genHtmlWorksInGallery(rep);
 
-            SaveFileDialog sdlg = new SaveFileDialog();
-            sdlg.DefaultExt = ".html";
-            sdlg.Filter = "Html Documents (.html)|*.html";
+            SaveFileDialog sdlg = new SaveFileDialog {DefaultExt = ".html", Filter = "Html Documents (.html)|*.html"};
             if (sdlg.ShowDialog() == true)
             {
                 string filename = sdlg.FileName;
@@ -799,7 +770,6 @@ namespace VRA
                 sw.WriteLine(full_rep);
                 sw.Close();
             }
-            sdlg = null;
         }
 
         private void GraphReportButton_Click(object sender, RoutedEventArgs e)

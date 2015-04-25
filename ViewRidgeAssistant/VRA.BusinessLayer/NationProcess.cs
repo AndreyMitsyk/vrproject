@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using VRA.BusinessLayer.Converters;
 using VRA.Dto;
 using Vra.DataAccess;
@@ -10,7 +7,7 @@ namespace VRA.BusinessLayer
 {
     public class NationProcess : INationProcess
     {
-        private static INationDao NatDao = new NationDao();
+        private static readonly INationDao NatDao = new NationDao();
 
         public IList<NationDto> GetList()
         {

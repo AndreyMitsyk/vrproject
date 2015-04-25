@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Vra.DataAccess;
+﻿using Vra.DataAccess;
 
 namespace VRA.BusinessLayer
 {
@@ -18,11 +14,6 @@ namespace VRA.BusinessLayer
         public string GetSettings()
         {
             return _settingsdao.GetSettings();
-        }
-        //Лишний метод ????????????????????????????????????????????????????
-        public bool SetSettings(string path)
-        {
-            return _settingsdao.SetSettings(path);
         }
 
         public bool SetSettings(string server, string db, string user, string password)

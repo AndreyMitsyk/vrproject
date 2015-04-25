@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess.Entities;
 
 namespace Vra.DataAccess
 {
     public interface IInterestsDao
     {
-        IList<Interests> GetAll();
+        IEnumerable<Interests> GetAll();
 
         void Add(Interests interest);
 

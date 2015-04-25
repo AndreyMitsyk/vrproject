@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using Vra.DataAccess.Entities;
 using System.Windows.Forms;
@@ -14,9 +10,11 @@ namespace Vra.DataAccess
     {
         private static Transaction LoadTransaction(SqlDataReader reader)
         {
-            Transaction Trans = new Transaction();
-            Trans.TransID = reader.GetInt32(reader.GetOrdinal("TransactionID"));
-            Trans.WorkId = reader.GetInt32(reader.GetOrdinal("WorkID"));
+            Transaction Trans = new Transaction
+            {
+                TransID = reader.GetInt32(reader.GetOrdinal("TransactionID")),
+                WorkId = reader.GetInt32(reader.GetOrdinal("WorkID"))
+            };
 
             object tmp = reader["CustomerID"];
             if (tmp != DBNull.Value) Trans.CustomerID = Convert.ToInt32(tmp);
@@ -39,7 +37,7 @@ namespace Vra.DataAccess
             return Trans;
         }
 
-        public IList<Transaction> GetAll()
+        public IEnumerable<Transaction> GetAll()
         {
             List<Transaction> Transactions = new List<Transaction>();
             using (var conn = GetConnection())
@@ -60,7 +58,7 @@ namespace Vra.DataAccess
             return Transactions;
         }
 
-        public IList<Transaction> GetInGallery()
+        public IEnumerable<Transaction> GetInGallery()
         {
             List<Transaction> Transactions = new List<Transaction>();
             using (var conn = GetConnection())
@@ -79,25 +77,6 @@ namespace Vra.DataAccess
                 }
             }
             return Transactions;
-        }
-
-        public Transaction GetLast()
-        {
-            using (var conn = GetConnection())
-            {
-                conn.Open();
-                using (var cmd = conn.CreateCommand())
-                {
-
-                    cmd.CommandText = "SELECT TOP 1 TransactionID, CustomerID, WorkID, DateAcquired, AcquisitionPrice, PurchaseDate, SalesPrice, AskingPrice FROM TRANS ORDER BY  TransactionID DESC ";
-
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        return !dataReader.Read() ? null : LoadTransaction(dataReader);
-                    }
-                }
-            }
-
         }
 
         public Transaction Get(int id)
@@ -152,7 +131,7 @@ namespace Vra.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Исключение базы данных: " + ex.ToString(), "WARNING!");
+                        MessageBox.Show("Исключение базы данных: " + ex.Message, "WARNING!");
                     }
                 }
             }
@@ -187,7 +166,7 @@ namespace Vra.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Исключение базы данных: " + ex.ToString(), "WARNING!");
+                        MessageBox.Show("Исключение базы данных: " + ex.Message, "WARNING!");
                     }
                 }
             }
@@ -208,7 +187,7 @@ namespace Vra.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Исключение базы данных: " + ex.ToString(), "WARNING!");
+                        MessageBox.Show("Исключение базы данных: " + ex.Message, "WARNING!");
                     }
                 }
             }

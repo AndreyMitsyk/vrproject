@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace VRA.Dto
+﻿namespace VRA.Dto
 {
     /// <summary>
     /// Класс - художник

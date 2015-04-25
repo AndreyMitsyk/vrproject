@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Globalization;
 using System.Threading;
 using VRA.Dto;
@@ -20,12 +13,11 @@ namespace VRA
     /// <summary>
     /// Логика взаимодействия для AddTransactionWindow.xaml
     /// </summary>
-    public partial class AddTransactionWindow : Window
+    public partial class AddTransactionWindow
     {
-        private IList<CustomerDto> Customers = ProcessFactory.GetCustomerProcess().GetList();
-        private IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
-        private IList<WorkDto> FreeForSale = ProcessFactory.GetWorkProcess().GetListInGallery(); // выбираем все работы доступные для продаж
-        private IList<WorkDto> FreeForPurchase = new List<WorkDto>();
+        private readonly IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
+        private readonly IList<WorkDto> FreeForSale = ProcessFactory.GetWorkProcess().GetListInGallery(); // выбираем все работы доступные для продаж
+        private readonly IList<WorkDto> FreeForPurchase = new List<WorkDto>();
 
         private int id;
         public string status;
@@ -87,12 +79,12 @@ namespace VRA
             }
         }
 
-        private void loadWork(string Title)
+        private void loadWork(string title)
         {
             this.cbCopy.Items.Clear();
             foreach (WorkDto work in Works)
             {
-                if (work.Title == Title)
+                if (work.Title == title)
                 {
                     this.cbCopy.Items.Add(work);
                 }
@@ -108,9 +100,9 @@ namespace VRA
             Thread.CurrentThread.CurrentCulture = ci;
 
             InitializeComponent();
-            Customers = ProcessFactory.GetCustomerProcess().GetList();
+            IList<CustomerDto> customers = ProcessFactory.GetCustomerProcess().GetList();
             Works = ProcessFactory.GetWorkProcess().GetList();
-            this.cbCustomer.ItemsSource = (from c in Customers orderby c.Name select c);
+            this.cbCustomer.ItemsSource = (from c in customers orderby c.Name select c);
             this.cbWork.ItemsSource = (from w in Works orderby w.Title select w);
             this.dpAcuired.IsTodayHighlighted = true;
         }
@@ -168,7 +160,7 @@ namespace VRA
                 {
                     transaction.AcquisitionPrice = Convert.ToDecimal(tbAcquisitionPrice.Text);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Введите корректную цену приобретения"); return;
                 }
@@ -180,7 +172,7 @@ namespace VRA
                 {
                     transaction.AskingPrice = Convert.ToDecimal(tbAskingPrice.Text);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Введите корректную запрашиваемую цену"); return;
                 }
@@ -226,7 +218,7 @@ namespace VRA
                         return;
                     }
                 }
-                catch (System.Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Невеный формат данных при операции с ценой продажи"); return;
                 }
@@ -254,7 +246,7 @@ namespace VRA
             if (this.status == "sale")
             {
                 WorkDto work = cbWork.SelectedItem as WorkDto;
-                this.id = FindTransaction(work.Id);
+                if (work != null) this.id = FindTransaction(work.Id);
                 loadTransaction(this.id);
             }
         }
@@ -276,9 +268,9 @@ namespace VRA
             }
         }
 
-        private void loadTransaction(int id)
+        private void loadTransaction(int transId)
         {
-            TransactionDto trans = ProcessFactory.GetTransactionProcess().Get(id);
+            TransactionDto trans = ProcessFactory.GetTransactionProcess().Get(transId);
             this.dpAcuired.Text = trans.DateAcquired.ToString();
             this.dpAcuired.IsEnabled = false;
             this.tbAcquisitionPrice.Text = trans.AcquisitionPrice.ToString();

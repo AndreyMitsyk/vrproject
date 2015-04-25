@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess;
-using VRA.BusinessLayer;
 using VRA.Dto;
 using VRA.BusinessLayer.Converters;
 
@@ -23,7 +19,7 @@ namespace VRA.BusinessLayer
             return DtoConverter.Convert(_TransDao.GetAll());
         }
 
-        public IList<TransactionDto> GetListInGallery()
+        public IEnumerable<TransactionDto> GetListInGallery()
         {
             return DtoConverter.Convert(_TransDao.GetInGallery());
         }
@@ -31,11 +27,6 @@ namespace VRA.BusinessLayer
         public TransactionDto Get(int id)
         {
             return DtoConverter.Convert(_TransDao.Get(id));
-        }
-
-        public TransactionDto GetLast()
-        {
-            return DtoConverter.Convert(_TransDao.GetLast());
         }
 
         public void Add(TransactionDto Trans)

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using Vra.DataAccess.Entities;
@@ -15,7 +13,7 @@ namespace Vra.DataAccess
         /// </summary>
         private static IDictionary<int, Nation> Nations;
 
-        private IList<Nation> LoadInternal()
+        private IEnumerable<Nation> LoadInternal()
         {
             IList<Nation> nations = new List<Nation>();
             using (var conn = GetConnection())
@@ -53,21 +51,16 @@ namespace Vra.DataAccess
         {
             if (Nations == null)
                 Load();
-            return Nations.ContainsKey(id) ? Nations[id] : null;
-        }
-
-        public void Reset()
-        {
-            if (Nations == null)
-                return;
-            Nations.Clear();
+            return Nations != null && Nations.ContainsKey(id) ? Nations[id] : null;
         }
 
         private static Nation LoadNation(SqlDataReader reader)
         {
-            Nation nation = new Nation();
-            nation.Id = reader.GetInt32(reader.GetOrdinal("NatID"));
-            nation.Name = reader.GetString(reader.GetOrdinal("Value"));
+            Nation nation = new Nation
+            {
+                Id = reader.GetInt32(reader.GetOrdinal("NatID")),
+                Name = reader.GetString(reader.GetOrdinal("Value"))
+            };
             return nation;
         }
 

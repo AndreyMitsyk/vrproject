@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess;
-using VRA.BusinessLayer;
 using VRA.Dto;
 using VRA.BusinessLayer.Converters;
 
@@ -24,10 +20,7 @@ namespace VRA.BusinessLayer
         {
             return DtoConverter.Convert(_workDao.GetInGallery());
         }
-        public WorkDto Get(int id)
-        {
-            return DtoConverter.Convert(_workDao.Get(id));
-        }
+
         public void Add(WorkDto work)
         {
             _workDao.Add(DtoConverter.Convert(work));

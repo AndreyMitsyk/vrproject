@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Vra.DataAccess.Entities
+﻿namespace Vra.DataAccess.Entities
 {
     public class Customer
     {

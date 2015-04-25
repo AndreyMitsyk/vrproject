@@ -44,17 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtistProcess.cs" />
     <Compile Include="ArtistProcessDb.cs" />
     <Compile Include="Converters\DtoConverter.cs" />
-    <Compile Include="CustomerProcess.cs" />
     <Compile Include="CustomerProcessDb.cs" />
     <Compile Include="IArtistProcess.cs" />
     <Compile Include="ICustomerProcess.cs" />
     <Compile Include="IInterests.cs" />
     <Compile Include="INationProcess.cs" />
     <Compile Include="InterestsProcessDb.cs" />
-    <Compile Include="IReportGenerator.cs" />
     <Compile Include="IReportItemProcess.cs" />
     <Compile Include="ISettingsProcess.cs" />
     <Compile Include="ITransactionProcess.cs" />

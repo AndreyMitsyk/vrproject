@@ -1,47 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using VRA.Dto;
 using VRA.BusinessLayer;
-using System.Windows.Controls.DataVisualization.Charting;
 
 namespace VRA
 {
     /// <summary>
     /// Логика взаимодействия для ReportWindow.xaml
     /// </summary>
-    public partial class ReportWindow : Window
+    public partial class ReportWindow
     {
-        public ObservableCollection<ReportItemDto> collection = new ObservableCollection<ReportItemDto>();
+        private ObservableCollection<ReportItemDto> collection = new ObservableCollection<ReportItemDto>();
 
         private void DateCompare()
         {
             if ((Convert.ToDateTime(datePicker1.Text)) >= Convert.ToDateTime(datePicker2.Text))
             {
-                MessageBox.Show("Дата окончания интервала запроса \n меньше либо равна дате начала"); return;
+                MessageBox.Show("Дата окончания интервала запроса \n меньше либо равна дате начала");
             }
         }
 
         private void GraphDraw()
         {
-            if (radioGist.IsChecked.Value)
+            if (radioGist.IsChecked != null && radioGist.IsChecked.Value)
             {
                 LineChart.Visibility = Visibility.Hidden;
                 ColumnChart.ItemsSource = collection;
                 ColumnChart.Visibility = Visibility.Visible;
             }
 
-            if (radioSpline.IsChecked.Value)
+            if (radioSpline.IsChecked != null && radioSpline.IsChecked.Value)
             {
                 ColumnChart.Visibility = Visibility.Hidden;
                 LineChart.ItemsSource = collection;
@@ -51,10 +40,10 @@ namespace VRA
 
         private void FillCollection()
         {
-            if (radioSales.IsChecked.Value)
+            if (radioSales.IsChecked != null && radioSales.IsChecked.Value)
             {
                 // если запрошена статистика по проданным
-                if (radioDay.IsChecked.Value)
+                if (radioDay.IsChecked != null && radioDay.IsChecked.Value)
                 {
                     TimeSpan ts = datePicker2.DisplayDate.Subtract(Convert.ToDateTime(datePicker1.Text));
 
@@ -67,7 +56,7 @@ namespace VRA
                     collection = ProcessFactory.GetReportProcess().GetSaled("day", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
-                if (radioMounth.IsChecked.Value)
+                if (radioMounth.IsChecked != null && radioMounth.IsChecked.Value)
                 {
                     int month = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / 30;
 
@@ -80,7 +69,7 @@ namespace VRA
                     collection = ProcessFactory.GetReportProcess().GetSaled("month", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
-                if (radioYear.IsChecked.Value)
+                if (radioYear.IsChecked != null && radioYear.IsChecked.Value)
                 {
                     int year = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / (30 * 12);
                     {
@@ -99,7 +88,7 @@ namespace VRA
                 // если запрашивают статистику по купленным
 
                 // если запрошена статистика по проданным
-                if (radioDay.IsChecked.Value)
+                if (radioDay.IsChecked != null && radioDay.IsChecked.Value)
                 {
                     TimeSpan ts = datePicker2.DisplayDate.Subtract(Convert.ToDateTime(datePicker1.Text));
 
@@ -112,7 +101,7 @@ namespace VRA
                     collection = ProcessFactory.GetReportProcess().GetPurchased("day", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
-                if (radioMounth.IsChecked.Value)
+                if (radioMounth.IsChecked != null && radioMounth.IsChecked.Value)
                 {
                     int month = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / 30;
 
@@ -125,7 +114,7 @@ namespace VRA
                     collection = ProcessFactory.GetReportProcess().GetPurchased("month", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
-                if (radioYear.IsChecked.Value)
+                if (radioYear.IsChecked != null && radioYear.IsChecked.Value)
                 {
                     int year = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / (30 * 12);
 

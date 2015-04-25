@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Vra.DataAccess.Entities;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Vra.DataAccess
@@ -21,9 +18,9 @@ namespace Vra.DataAccess
             {
                 report.date = reader.GetDateTime(reader.GetOrdinal("mydate"));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
+                report.date = DateTime.Now;
             }
             report.price = reader.GetDecimal(reader.GetOrdinal("mysum"));
             report.count = reader.GetInt32(reader.GetOrdinal("mycount"));
@@ -31,7 +28,7 @@ namespace Vra.DataAccess
             return report;
         }
 
-        public IList<Report> getPurchasedPerDays(DateTime start, DateTime end)
+        public IEnumerable<Report> getPurchasedPerDays(DateTime start, DateTime end)
         {
             IList<Report> reports = new List<Report>();
 
@@ -62,7 +59,7 @@ namespace Vra.DataAccess
             return reports;
         }
 
-        public IList<Report> getPurchasedPerMonth(DateTime start, DateTime end)
+        public IEnumerable<Report> getPurchasedPerMonth(DateTime start, DateTime end)
         {
             IList<Report> reports = new List<Report>();
 
@@ -93,7 +90,7 @@ namespace Vra.DataAccess
             return reports;
         }
 
-        public IList<Report> getPurchasedPerYear(DateTime start, DateTime end)
+        public IEnumerable<Report> getPurchasedPerYear(DateTime start, DateTime end)
         {
             IList<Report> reports = new List<Report>();
 
@@ -125,7 +122,7 @@ namespace Vra.DataAccess
         }
 
 
-        public IList<Report> getSalesPerDay(DateTime start, DateTime end)
+        public IEnumerable<Report> getSalesPerDay(DateTime start, DateTime end)
         {
             IList<Report> reports = new List<Report>();
 
@@ -156,7 +153,7 @@ namespace Vra.DataAccess
             return reports;
         }
 
-        public IList<Report> getSalesPerMonth(DateTime start, DateTime end)
+        public IEnumerable<Report> getSalesPerMonth(DateTime start, DateTime end)
         {
             IList<Report> reports = new List<Report>();
 
@@ -187,7 +184,7 @@ namespace Vra.DataAccess
             return reports;
         }
 
-        public IList<Report> getSalesPerYear(DateTime start, DateTime end)
+        public IEnumerable<Report> getSalesPerYear(DateTime start, DateTime end)
         {
             IList<Report> reports = new List<Report>();
 

@@ -69,7 +69,6 @@
         </DataGrid>
         <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.ColumnSpan="3">
             <MenuItem Name="DataBase" Header="База данных">
-                <MenuItem Name="dataBaseP" Header="Создать соединение с новой БД" Click="Path_Click"/>
                 <MenuItem Name="dataBaseS" Header="Настроить соединение с имеющейся БД" Click="btnDatabase_Click"/>
             </MenuItem>
             <MenuItem Name="Reports" Header="Отчеты">

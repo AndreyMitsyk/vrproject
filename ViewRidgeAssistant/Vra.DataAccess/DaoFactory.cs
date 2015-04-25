@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Vra.DataAccess
+﻿namespace Vra.DataAccess
 {
-    public class DaoFactory
+    public static class DaoFactory
     {
         public static IArtistDao GetArtistDao()
         {
@@ -35,11 +30,6 @@ namespace Vra.DataAccess
         public static ITransactionDao GetTransactionDao()
         {
             return new TransactionDao();
-        }
-
-        public static SettingsDao GetSettingsDao()
-        {
-            return new SettingsDao();
         }
     }
 }

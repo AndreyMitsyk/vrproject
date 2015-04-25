@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Vra.DataAccess;
-using VRA.BusinessLayer;
 using VRA.Dto;
 using VRA.BusinessLayer.Converters;
 
@@ -13,7 +9,7 @@ namespace VRA.BusinessLayer
     {
         private readonly IInterestsDao Interests = DaoFactory.GetInterestDao();
 
-        public IList<InterestsDto> GetList()
+        public IEnumerable<InterestsDto> GetList()
         {
             return DtoConverter.Convert(Interests.GetAll());
         }

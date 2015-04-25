@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using Vra.DataAccess.Entities;
 using System.Windows.Forms;
@@ -15,12 +11,14 @@ namespace Vra.DataAccess
         private static Work LoadWork(SqlDataReader reader)
         {
             //Создаём пустой объект
-            Work work = new Work();
+            Work work = new Work
+            {
+                Id = reader.GetInt32(reader.GetOrdinal("WorkID")),
+                Title = reader.GetString(reader.GetOrdinal("Title")),
+                ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"))
+            };
             //Заполняем поля объекта в соответствии с названиями полей результирующего
             // набора данных
-            work.Id = reader.GetInt32(reader.GetOrdinal("WorkID"));
-            work.Title = reader.GetString(reader.GetOrdinal("Title"));
-            work.ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"));
             //остальные строки могут иметь значение NULL
             object tmp = reader["Description"];
             if (tmp != DBNull.Value)
@@ -46,7 +44,7 @@ namespace Vra.DataAccess
             }
         }
 
-        public IList<Work> GetAll()
+        public IEnumerable<Work> GetAll()
         {
             IList<Work> works = new List<Work>();
             using (var conn = GetConnection())
@@ -68,7 +66,7 @@ namespace Vra.DataAccess
         }
 
         // получить выставленные на продажу картины
-        public IList<Work> GetInGallery()
+        public IEnumerable<Work> GetInGallery()
         {
             IList<Work> works = new List<Work>();
 
@@ -148,13 +146,13 @@ namespace Vra.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Исключение базы данных : " + ex.ToString(), "WARNING!");
+                        MessageBox.Show("Исключение базы данных : " + ex.Message, "WARNING!");
                     }
                 }
             }
         }
 
-        public IList<Work> SearchWork(string Title, string Artist, string Copy)
+        public IEnumerable<Work> SearchWork(string Title, string Artist, string Copy)
         {
             IList<Work> works = new List<Work>();
 

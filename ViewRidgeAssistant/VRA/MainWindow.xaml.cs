@@ -715,6 +715,7 @@ namespace VRA
             window.ShowDialog();
         }
 
+        //не понятно зачем это придумали  - думаю убрать следует *******************************
         private void Path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog settingsDialog = new OpenFileDialog();
@@ -727,7 +728,7 @@ namespace VRA
                 SettingsDao _settings = DaoFactory.GetSettingsDao();
                 _settings.SetSettings(settingsDialog.FileName);
             }
-        }
+        }//**************************************************************************
 
         private void ExcelExporterButton_Click(object sender, RoutedEventArgs e)
         {
@@ -790,7 +791,7 @@ namespace VRA
 
             SaveFileDialog sdlg = new SaveFileDialog();
             sdlg.DefaultExt = ".html";
-            sdlg.Filter = "Html Ducoments (.html)|*.html";
+            sdlg.Filter = "Html Documents (.html)|*.html";
             if (sdlg.ShowDialog() == true)
             {
                 string filename = sdlg.FileName;

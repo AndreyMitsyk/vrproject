@@ -20,7 +20,7 @@ namespace Vra.DataAccess
                 return null;
             }
         }
-
+        //лишняя реализация ??????????????????*****************************
         public bool SetSettings(string path)
         {
             SqlConnectionStringBuilder conStr = new SqlConnectionStringBuilder();

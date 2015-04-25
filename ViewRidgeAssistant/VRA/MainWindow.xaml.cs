@@ -637,7 +637,7 @@ namespace VRA
         }
         #endregion;
 
-        #region Interes
+        #region Interest
 
         private void btnAddI_Click()
         {
@@ -729,7 +729,7 @@ namespace VRA
             }
         }
 
-        private void ExelExporterButton_Click(object sender, RoutedEventArgs e)
+        private void ExcelExporterButton_Click(object sender, RoutedEventArgs e)
         {
             List<object> grid = null;
 
@@ -763,7 +763,7 @@ namespace VRA
         {
             String rep = "";
 
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            OpenFileDialog dlg = new OpenFileDialog();
             dlg.DefaultExt = ".vrt";
             dlg.Filter = "View Ridge Assistant Template files|*.vrt";
 
@@ -771,7 +771,7 @@ namespace VRA
 
             if (result == true)
             {
-                System.IO.StreamReader sr = new System.IO.StreamReader(dlg.FileName);
+                StreamReader sr = new StreamReader(dlg.FileName);
                 rep = sr.ReadToEnd();
                 sr.Close();
             }
@@ -784,7 +784,7 @@ namespace VRA
 
             string full_rep = ProcessFactory.GetReport().genHtmlWorksInGallery(rep);
 
-            Microsoft.Win32.SaveFileDialog sdlg = new Microsoft.Win32.SaveFileDialog();
+            SaveFileDialog sdlg = new SaveFileDialog();
             sdlg.DefaultExt = ".html";
             sdlg.Filter = "Html Ducoments (.html)|*.html";
             if (sdlg.ShowDialog() == true)

@@ -73,7 +73,7 @@
                 <MenuItem Name="dataBaseS" Header="Настроить соединение с имеющейся БД" Click="btnDatabase_Click"/>
             </MenuItem>
             <MenuItem Name="Reports" Header="Отчеты">
-                <MenuItem Name="ExelExporterButton" Header="Экспорт таблицы Excel" Click="ExelExporterButton_Click" />
+                <MenuItem Name="ExelExporterButton" Header="Экспорт таблицы Excel" Click="ExcelExporterButton_Click" />
                 <MenuItem Name="HtmlWorksInGalleryButton" Header="Прайс-лист работ" Click="HtmlWorksInGalleryButton_Click" />
                 <MenuItem Name="GraphReportButton" Header="Отчет по продажам" Click="GraphReportButton_Click" />
             </MenuItem>

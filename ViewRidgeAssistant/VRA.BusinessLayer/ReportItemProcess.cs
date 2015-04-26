@@ -22,11 +22,11 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto {date = d, count = 0, price = 0};
+                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Day.ToString(), count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
-                                if (item.date == d)
+                                if (Convert.ToDateTime(item.date).Date == d)
                                 {
                                     repItem = item;
                                 }
@@ -47,11 +47,11 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto {date = d, count = 0, price = 0};
+                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Month.ToString(), count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
-                                if ((item.date.Month == d.Month) && (item.date.Year == d.Year))
+                                if ((Convert.ToDateTime(item.date).Month == d.Month) && (Convert.ToDateTime(item.date).Year == d.Year))
                                 {
 
                                     repItem.count += item.count;
@@ -75,11 +75,11 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto {date = d, count = 0, price = 0};
+                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Year.ToString(), count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
-                                if (item.date.Year == d.Year)
+                                if (Convert.ToDateTime(item.date).Year == d.Year)
                                 {
                                     repItem.count += item.count;
                                     repItem.price += item.price;

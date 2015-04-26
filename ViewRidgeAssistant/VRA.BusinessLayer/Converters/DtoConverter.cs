@@ -267,7 +267,7 @@ namespace VRA.BusinessLayer.Converters
         {
             if (report == null) { return null; }
 
-            ReportItemDto reportdto = new ReportItemDto {date = report.date, count = report.count, price = report.price};
+            ReportItemDto reportdto = new ReportItemDto {date = report.date.ToString(), count = report.count, price = report.price};
 
             return reportdto;
         }

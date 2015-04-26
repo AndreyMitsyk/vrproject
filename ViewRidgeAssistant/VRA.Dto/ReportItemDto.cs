@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace VRA.Dto
+﻿namespace VRA.Dto
 {
     public class ReportItemDto
     {
-        public DateTime date { get; set; }
+        public string date { get; set; }
         public int count { get; set; }
         public decimal price { get; set; }
     }

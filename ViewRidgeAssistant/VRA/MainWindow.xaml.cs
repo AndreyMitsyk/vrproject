@@ -68,10 +68,11 @@ namespace VRA
                     break;
             }
 
-            this.dgArtists.Visibility = Visibility.Visible;
-            status = "Artist";
-            this.btnRefresh_Click(sender, e);
+            this.dgArtists.Visibility = Visibility.Visible;//отображаем DateGrid художников
+            status = "Artist";//устанавливаем таблицу, с которой работаем в данный момент
+            this.btnRefresh_Click(sender, e);//загружаем данные в DateGrid
             this.statusLabel.Content = "Работа с таблицей: Художники";
+            //устанавливаем видимость кнопок управления записями таблицы
             this.btnAdd.Visibility = Visibility.Visible;
             this.btnPurchase.Visibility = Visibility.Collapsed;
             this.btnSale.Visibility = Visibility.Collapsed;

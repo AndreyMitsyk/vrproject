@@ -45,7 +45,7 @@ namespace VRA
                 // если запрошена статистика по проданным
                 if (radioDay.IsChecked != null && radioDay.IsChecked.Value)
                 {
-                    TimeSpan ts = datePicker2.DisplayDate.Subtract(Convert.ToDateTime(datePicker1.Text));
+                    TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
                     if (ts.Days > 10)
                     {
@@ -58,11 +58,11 @@ namespace VRA
 
                 if (radioMounth.IsChecked != null && radioMounth.IsChecked.Value)
                 {
-                    int month = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / 30;
+                    TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
-                    if (month > 10)
+                    if (ts.Days/30 > 10)
                     {
-                        MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней "); return;
+                        MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 месяцев "); return;
                     }
 
                     collection.Clear();
@@ -71,16 +71,19 @@ namespace VRA
 
                 if (radioYear.IsChecked != null && radioYear.IsChecked.Value)
                 {
-                    int year = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / (30 * 12);
+                    TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
+
+                    if (ts.Days/(30*12) > 10)
                     {
-                        if (year > 10)
-                        {
-                            MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней "); return;
-                        }
+                        MessageBox.Show(
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 лет ");
+                        return;
                     }
 
+
                     collection.Clear();
-                    collection = ProcessFactory.GetReportProcess().GetSaled("year", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                    collection = ProcessFactory.GetReportProcess()
+                        .GetSaled("year", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
             }
             else

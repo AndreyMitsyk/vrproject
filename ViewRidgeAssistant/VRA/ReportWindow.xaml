@@ -20,8 +20,8 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Height="62" HorizontalAlignment="Left" Margin="5,1,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="156">
             <TextBlock FontStyle="Italic" HorizontalAlignment="Center">Отобразить:</TextBlock>
-            <RadioButton Content="Сумма проданных" Height="16" Name="radioSales" IsChecked="True"  Margin="3"/>
-            <RadioButton Content="Сумма купленных" Height="16" Name="radioPurchase"  Margin="3"/>
+            <CheckBox Content="Сумма проданных" Height="16" Name="radioSales" IsChecked="True"  Margin="3"/>
+            <CheckBox Content="Сумма купленных" Height="16" Name="radioPurchase"  Margin="3"/>
         </StackPanel>
         <TextBlock Grid.Column="1" Grid.Row="2" Height="auto" HorizontalAlignment="Center" Margin="62,3,47,0" Name="textBlock1" Text="За период:" VerticalAlignment="Top" Width="auto" TextAlignment="Center" FontStyle="Italic" />
         <TextBlock Grid.Column="1" Grid.Row="2" Height="16" HorizontalAlignment="Left" Margin="19,29,0,0" Name="textBlock2" Text="C" VerticalAlignment="Top" Width="26" />

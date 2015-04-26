@@ -158,7 +158,7 @@
                     <TextBlock>Добавить объект</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button Height="52" Width="70" Name="btn_purchase" VerticalAlignment="Top" Click="btn_purchase_Click" HorizontalAlignment="Left">
+            <Button Height="52" Width="70" Name="btnPurchase" VerticalAlignment="Top" Click="btnPurchase_Click" HorizontalAlignment="Left">
                 <Button.Content>
                     <StackPanel>
                         <Image Source="/VRA;component/Images/Purchase.ico" Width="30"></Image>
@@ -170,7 +170,7 @@
                     <TextBlock>Купить картину</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button Height="52" Width="70" Name="btn_sale" VerticalAlignment="Top" Click="btn_sale_Click" HorizontalAlignment="Left">
+            <Button Height="52" Width="70" Name="btnSale" VerticalAlignment="Top" Click="btnSale_Click" HorizontalAlignment="Left">
                 <Button.Content>
                     <StackPanel>
                         <Image Source="/VRA;component/Images/Sale.ico" Width="30"></Image>

@@ -29,16 +29,12 @@ namespace VRA
             {
                 case "Artist": this.dgArtists.Visibility = Visibility.Hidden;
                     break;
-
                 case "Work": this.dgWork.Visibility = Visibility.Hidden;
                     break;
-
                 case "Trans": this.dgTrans.Visibility = Visibility.Hidden;
                     break;
-
                 case "Interests": this.dgInterests.Visibility = Visibility.Hidden;
                     break;
-
                 case "Nations": this.dgNations.Visibility = Visibility.Hidden;
                     break;
             }
@@ -48,8 +44,8 @@ namespace VRA
             this.btnRefresh_Click(sender, e);
             this.statusLabel.Content = "Работа с таблицей: Клиенты";
             this.btnAdd.Visibility = Visibility.Visible;
-            this.btn_purchase.Visibility = Visibility.Collapsed;
-            this.btn_sale.Visibility = Visibility.Collapsed;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
             this.btnEdit.Visibility = Visibility.Visible;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -62,16 +58,12 @@ namespace VRA
             {
                 case "Customer": this.dgCustomers.Visibility = Visibility.Hidden;
                     break;
-
                 case "Work": this.dgWork.Visibility = Visibility.Hidden;
                     break;
-
                 case "Trans": this.dgTrans.Visibility = Visibility.Hidden;
                     break;
-
                 case "Interests": this.dgInterests.Visibility = Visibility.Hidden;
                     break;
-
                 case "Nations": this.dgNations.Visibility = Visibility.Hidden;
                     break;
             }
@@ -81,8 +73,8 @@ namespace VRA
             this.btnRefresh_Click(sender, e);
             this.statusLabel.Content = "Работа с таблицей: Художники";
             this.btnAdd.Visibility = Visibility.Visible;
-            this.btn_purchase.Visibility = Visibility.Collapsed;
-            this.btn_sale.Visibility = Visibility.Collapsed;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
             this.btnEdit.Visibility = Visibility.Visible;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -95,16 +87,12 @@ namespace VRA
             {
                 case "Artist": this.dgArtists.Visibility = Visibility.Hidden;
                     break;
-
                 case "Customer": this.dgCustomers.Visibility = Visibility.Hidden;
                     break;
-
                 case "Trans": this.dgTrans.Visibility = Visibility.Hidden;
                     break;
-
                 case "Interests": this.dgInterests.Visibility = Visibility.Hidden;
                     break;
-
                 case "Nations": this.dgNations.Visibility = Visibility.Hidden;
                     break;
             }
@@ -114,8 +102,8 @@ namespace VRA
             this.btnRefresh_Click(sender, e);
             this.statusLabel.Content = "Работа с таблицей: Работы";
             this.btnAdd.Visibility = Visibility.Visible;
-            this.btn_purchase.Visibility = Visibility.Collapsed;
-            this.btn_sale.Visibility = Visibility.Collapsed;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
             this.btnEdit.Visibility = Visibility.Visible;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -128,16 +116,12 @@ namespace VRA
             {
                 case "Artist": this.dgArtists.Visibility = Visibility.Hidden;
                     break;
-
                 case "Customer": this.dgCustomers.Visibility = Visibility.Hidden;
                     break;
-
                 case "Work": this.dgWork.Visibility = Visibility.Hidden;
                     break;
-
                 case "Interests": this.dgInterests.Visibility = Visibility.Hidden;
                     break;
-
                 case "Nations": this.dgNations.Visibility = Visibility.Hidden;
                     break;
             }
@@ -147,8 +131,8 @@ namespace VRA
             this.btnRefresh_Click(sender, e);
             this.statusLabel.Content = "Работа с таблицей: Транзакции";
             this.btnAdd.Visibility = Visibility.Collapsed;
-            this.btn_purchase.Visibility = Visibility.Visible;
-            this.btn_sale.Visibility = Visibility.Visible;
+            this.btnPurchase.Visibility = Visibility.Visible;
+            this.btnSale.Visibility = Visibility.Visible;
             this.btnEdit.Visibility = Visibility.Visible;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -161,16 +145,12 @@ namespace VRA
             {
                 case "Artist": this.dgArtists.Visibility = Visibility.Hidden;
                     break;
-
                 case "Customer": this.dgCustomers.Visibility = Visibility.Hidden;
                     break;
-
                 case "Work": this.dgWork.Visibility = Visibility.Hidden;
                     break;
-
                 case "Trans": this.dgTrans.Visibility = Visibility.Hidden;
                     break;
-
                 case "Nations": this.dgNations.Visibility = Visibility.Hidden;
                     break;
             }
@@ -180,8 +160,8 @@ namespace VRA
             this.btnRefresh_Click(sender, e);
             this.statusLabel.Content = "Работа с таблицей: Интересы";
             this.btnAdd.Visibility = Visibility.Visible;
-            this.btn_purchase.Visibility = Visibility.Collapsed;
-            this.btn_sale.Visibility = Visibility.Collapsed;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
             this.btnEdit.Visibility = Visibility.Collapsed;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -194,16 +174,12 @@ namespace VRA
             {
                 case "Artist": this.dgArtists.Visibility = Visibility.Hidden;
                     break;
-
                 case "Customer": this.dgCustomers.Visibility = Visibility.Hidden;
                     break;
-
                 case "Work": this.dgWork.Visibility = Visibility.Hidden;
                     break;
-
                 case "Trans": this.dgTrans.Visibility = Visibility.Hidden;
                     break;
-
                 case "Interests": this.dgInterests.Visibility = Visibility.Hidden;
                     break;
             }
@@ -213,8 +189,8 @@ namespace VRA
             this.btnRefresh_Click(sender, e);
             this.statusLabel.Content = "Работа с таблицей: Нации";
             this.btnAdd.Visibility = Visibility.Visible;
-            this.btn_purchase.Visibility = Visibility.Collapsed;
-            this.btn_sale.Visibility = Visibility.Collapsed;
+            this.btnPurchase.Visibility = Visibility.Collapsed;
+            this.btnSale.Visibility = Visibility.Collapsed;
             this.btnEdit.Visibility = Visibility.Collapsed;
             this.btnDelete.Visibility = Visibility.Visible;
             this.btnRefresh.Visibility = Visibility.Visible;
@@ -230,45 +206,40 @@ namespace VRA
             {
                 case "Artist": this.btnAddA_Click();
                     break;
-
                 case "Work": this.btnAddW_Click();
                     break;
-
                 case "Customer": this.btnAddC_Click();
                     break;
-
                 case "Nations": this.btnAddN_Click();
                     break;
-
                 case "Interests": this.btnAddI_Click();
                     break;
-
                 default: MessageBox.Show("Необходимо выбрать таблицу, в которую добавляется элемент!"); return;
             }
         }
 
-        private void btn_purchase_Click(object sender, RoutedEventArgs e)
+        private void btnPurchase_Click(object sender, RoutedEventArgs e)
         {
             switch (status)
             {
                 case "Trans":
                     AddTransactionWindow window = new AddTransactionWindow {status = "purchase"};
                     window.ShowDialog();
-                    btnReloadT_Click();
+                    btnRefreshT_Click();
                     break;
 
                 default: MessageBox.Show("Необходимо выбрать таблицу, Транзакции!"); return;
             }
         }
 
-        private void btn_sale_Click(object sender, RoutedEventArgs e)
+        private void btnSale_Click(object sender, RoutedEventArgs e)
         {
             switch (status)
             {
                 case "Trans":
                     AddTransactionWindow window = new AddTransactionWindow {status = "sale"};
                     window.ShowDialog();
-                    btnReloadT_Click();
+                    btnRefreshT_Click();
                     break;
 
                 default: MessageBox.Show("Необходимо выбрать таблицу, Транзакции!"); return;
@@ -281,16 +252,12 @@ namespace VRA
             {
                 case "Artist": this.btnEditA_Click();
                     break;
-
                 case "Work": this.btnEditW_Click();
                     break;
-
                 case "Trans": this.btnEditT_Click();
                     break;
-
                 case "Customer": this.btnEditC_Click();
                     break;
-
                 default: MessageBox.Show("Необходимо выбрать таблицу  и элемент для редактирования !"); return;
             }
         }
@@ -301,22 +268,16 @@ namespace VRA
             {
                 case "Artist": this.btnDeleteA_Click();
                     break;
-
                 case "Work": this.btnDeleteW_Click();
                     break;
-
                 case "Trans": this.btnDeleteT_Click();
                     break;
-
                 case "Customer": this.btnDeleteC_Click();
                     break;
-
                 case "Nations": this.btnDeleteN_Click();
                     break;
-
                 case "Interests": this.btnDeleteI_Click();
                     break;
-
                 default: MessageBox.Show("Необходимо выбрать таблицу  и элемент для удаления !"); return;
             }
         }
@@ -325,24 +286,18 @@ namespace VRA
         {
             switch (status)
             {
-                case "Artist": this.btnReloadA_Click();
+                case "Artist": this.btnRefreshA_Click();
                     break;
-
-                case "Work": this.btnReloadW_Click();
+                case "Work": this.btnRefreshW_Click();
                     break;
-
-                case "Trans": this.btnReloadT_Click();
+                case "Trans": this.btnRefreshT_Click();
                     break;
-
-                case "Customer": this.btnReloadC_Click();
+                case "Customer": this.btnRefreshC_Click();
                     break;
-
-                case "Interests": this.btnReloadI_Click();
+                case "Interests": this.btnRefreshI_Click();
                     break;
-
-                case "Nations": this.dgNations.ItemsSource = ProcessFactory.GetNationProcess().GetList();
+                case "Nations": this.btnRefreshN_Click();
                     break;
-
                 default: MessageBox.Show("Необходимо выбрать таблицу для обновления !"); return;
             }
         }
@@ -362,7 +317,6 @@ namespace VRA
                             this.dgArtists.Visibility = Visibility.Visible;
                         }
                         break;
-
                     case "Customer":
                         search.ShowDialog();
                         if (search.exec)
@@ -372,7 +326,6 @@ namespace VRA
                             this.dgCustomers.Visibility = Visibility.Visible;
                         }
                         break;
-
                     case "Work":
                         search.ShowDialog();
                         if (search.exec)
@@ -382,7 +335,6 @@ namespace VRA
                             this.dgWork.Visibility = Visibility.Visible;
                         }
                         break;
-
                     case "Trans":
                         search.ShowDialog();
                         if (search.exec)
@@ -392,7 +344,6 @@ namespace VRA
                             this.dgTrans.Visibility = Visibility.Visible;
                         }
                         break;
-
                     case "Interests":
                         search.ShowDialog();
                         if (search.exec)
@@ -402,7 +353,6 @@ namespace VRA
                             this.dgInterests.Visibility = Visibility.Visible;
                         }
                         break;
-
                     default: MessageBox.Show("Для поиска необходимо выбрать таблицу!"); break;
                 }
             }
@@ -439,10 +389,10 @@ namespace VRA
             //Если все проверки пройдены и подтверждение получено, удаляем художника
             ProcessFactory.GetArtistProcess().Delete(item.Id);
             //И перезагружаем список художников
-            btnReloadA_Click();
+            btnRefreshA_Click();
         }
 
-        private void btnReloadA_Click()
+        private void btnRefreshA_Click()
         {
             //Получаем список художников и передаем его на отображение таблице
             dgArtists.ItemsSource = ProcessFactory.GetArtistProcess().GetList();
@@ -466,7 +416,7 @@ namespace VRA
             //Отображаем окно с данными
             window.ShowDialog();
             //Перезагружаем список объектов
-            btnReloadA_Click();
+            btnRefreshA_Click();
         }
         #endregion
 
@@ -497,10 +447,10 @@ namespace VRA
             window.ShowDialog();
             //Перезагружаем список объектов
 
-            btnReloadC_Click();
+            btnRefreshC_Click();
         }
 
-        private void btnReloadC_Click()
+        private void btnRefreshC_Click()
         {
             dgCustomers.ItemsSource = ProcessFactory.GetCustomerProcess().GetList();
         }
@@ -523,7 +473,7 @@ namespace VRA
 
             ProcessFactory.GetCustomerProcess().Delete(item.Id);
 
-            btnReloadC_Click();
+            btnRefreshC_Click();
         }
         #endregion;
 
@@ -549,10 +499,10 @@ namespace VRA
             AddWorkWindow window = new AddWorkWindow();
             window.Load(item);
             window.ShowDialog();
-            btnReloadW_Click();
+            btnRefreshW_Click();
         }
 
-        private void btnReloadW_Click()
+        private void btnRefreshW_Click()
         {
             dgWork.ItemsSource = ProcessFactory.GetWorkProcess().GetList();
         }
@@ -577,7 +527,7 @@ namespace VRA
             //Если все проверки пройдены и подтверждение получено, удаляем
             ProcessFactory.GetWorkProcess().Delete(item.Id);
 
-            btnReloadW_Click();
+            btnRefreshW_Click();
         }
         #endregion;
 
@@ -596,10 +546,10 @@ namespace VRA
             AddTransactionWindow window = new AddTransactionWindow();
             window.Load(item);
             window.ShowDialog();
-            btnReloadT_Click();
+            btnRefreshT_Click();
         }
 
-        private void btnReloadT_Click()
+        private void btnRefreshT_Click()
         {
             dgTrans.ItemsSource = ProcessFactory.GetTransactionProcess().GetList();
         }
@@ -621,7 +571,7 @@ namespace VRA
 
             ProcessFactory.GetTransactionProcess().Delete(item.TransactionID);
 
-            btnReloadT_Click();
+            btnRefreshT_Click();
         }
         #endregion;
 
@@ -651,10 +601,10 @@ namespace VRA
 
             ProcessFactory.GetInterestsProcess().Delete(item);
 
-            btnReloadI_Click();
+            btnRefreshI_Click();
         }
 
-        private void btnReloadI_Click()
+        private void btnRefreshI_Click()
         {
             this.dgInterests.ItemsSource = ProcessFactory.GetInterestsProcess().GetList();
         }
@@ -666,10 +616,10 @@ namespace VRA
         {
             AddNationWindow window = new AddNationWindow();
             window.ShowDialog();
-            this.btnReloadN_Click();
+            this.btnRefreshN_Click();
         }
 
-        private void btnReloadN_Click()
+        private void btnRefreshN_Click()
         {
             dgNations.ItemsSource = ProcessFactory.GetNationProcess().GetList();
         }
@@ -691,7 +641,7 @@ namespace VRA
 
             ProcessFactory.GetNationProcess().Delete(item.Id);
 
-            btnReloadN_Click();
+            btnRefreshN_Click();
         }
         #endregion;
 
@@ -712,23 +662,18 @@ namespace VRA
                 case "Customer":
                     grid = this.dgCustomers.ItemsSource.Cast<object>().ToList();
                     break;
-
                 case "Artist":
                     grid = this.dgArtists.ItemsSource.Cast<object>().ToList();
                     break;
-
                 case "Work":
                     grid = this.dgWork.ItemsSource.Cast<object>().ToList();
                     break;
-
                 case "Trans":
                     grid = this.dgTrans.ItemsSource.Cast<object>().ToList();
                     break;
-
                 case "Interests":
                     grid = this.dgInterests.ItemsSource.Cast<object>().ToList();
                     break;
-
                 case "Nations":
                     grid = this.dgNations.ItemsSource.Cast<object>().ToList();
                     break;

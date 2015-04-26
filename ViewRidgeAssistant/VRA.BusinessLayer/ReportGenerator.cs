@@ -31,13 +31,13 @@ namespace VRA.BusinessLayer
                 // первая строка (шапка таблицы) -- жирным стилем
                 excel.Cells[y, 1].EntireRow.Font.Bold = true;
 
-                // вырванивание ткста в ячейках -- по левому краю
+                // вырванивание текста в ячейках -- по левому краю
                 excel.Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
                 // Устанавливает формат ячеек
                 excel.Cells.NumberFormat = "General";
 
-                /* Пример с перебором Properties объекта. Данный пример демонстрирует, как можно
+            /* Пример с перебором Properties объекта. Данный пример демонстрирует, как можно
              * перебирая объявленные в данном классе property, записывать их в Excel. 
              * При этом, последовательность полей соответствует последовательности их
              * объявления в соответствующем используемом классе.
@@ -79,14 +79,11 @@ namespace VRA.BusinessLayer
                 foreach (var item in grid)
                 {
                     y++;
-
                     Object itemObj = item; // объект-контейнер для текущего читаемого элемента
-
                     x = 1;
                     foreach (var prop in itemObj.GetType().GetProperties())
                     {
                         object t = prop.GetValue(itemObj, null);
-
                         String val;
 
                         if (t == null)
@@ -114,7 +111,6 @@ namespace VRA.BusinessLayer
             }
             else MessageBox.Show("Данные не загружены!");
         }
-
 
         public string genHtmlWorksInGallery(string rep)
         {

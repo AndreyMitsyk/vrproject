@@ -101,7 +101,7 @@ namespace VRA.BusinessLayer
                             if (t is WorkDto)
                                 val = ((WorkDto) t).Title;
                         }
-                        excel.Cells[y, x] = val.Trim();
+                        excel.Cells[y, x] = val.Trim().Replace("-", "");
                         x++;
                     }
                 }

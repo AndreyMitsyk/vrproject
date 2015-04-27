@@ -126,12 +126,12 @@ namespace VRA.BusinessLayer
                 foreach (var t_item in trans)
                 {
                     TransactionDto TransItem = (TransactionDto) t_item;
-                    if ((WorkItem.Id == TransItem.Work.Id) && (TransItem.Customer == null))
+                    if (WorkItem.Id == TransItem.Work.Id)
                     {
                         ArtistDto ArtistItem = ProcessFactory.GetArtistProcess().Get(WorkItem.Artist.Id);
 
                         res_html += "<tr><td><p>" + WorkItem.Id + "</p></td>";
-                        res_html += "<td><p>" + WorkItem.Title + "</p></td>";
+                        res_html += "<td><p>" + WorkItem.Title + "/" + (WorkItem.Copy ?? "") + "</p></td>";
                         res_html += "<td><p>" + ArtistItem.Name + "</p></td>";
                         res_html += "<td><p>" + TransItem.AskingPrice + "</p></td>";
                         res_html += "<td><p>" + (WorkItem.Description ?? "") + "</p></td></tr>";

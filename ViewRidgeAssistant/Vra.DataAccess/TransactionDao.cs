@@ -66,7 +66,7 @@ namespace Vra.DataAccess
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT TransactionID, CustomerID, WorkID, DateAcquired, AcquisitionPrice, PurchaseDate, SalesPrice, AskingPrice FROM TRANS WHERE CustomerID is NULL and SalesPrice is NULL and PurchaseDate is NULL";
+                    cmd.CommandText = "SELECT TransactionID, CustomerID, WorkID, DateAcquired, AcquisitionPrice, PurchaseDate, SalesPrice, AskingPrice FROM TRANS WHERE CustomerID is NULL";
                     using (var dataReader = cmd.ExecuteReader())
                     {
                         while (dataReader.Read())

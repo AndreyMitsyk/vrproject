@@ -48,7 +48,7 @@
             return new TransactionProcessDb();
         }
 
-        public static ReportGenerator GetReport()
+        public static IReportGenerator GetReport()
         {
             return new ReportGenerator();
         }

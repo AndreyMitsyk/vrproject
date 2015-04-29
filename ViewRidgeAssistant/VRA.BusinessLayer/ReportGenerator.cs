@@ -9,7 +9,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace VRA.BusinessLayer
 {
-    public class ReportGenerator
+    public class ReportGenerator : IReportGenerator
     {
 
         public void fillExcelTableByType(IEnumerable<object> grid, string status)

@@ -52,6 +52,7 @@
     <Compile Include="IInterests.cs" />
     <Compile Include="INationProcess.cs" />
     <Compile Include="InterestsProcessDb.cs" />
+    <Compile Include="IReportGenerator.cs" />
     <Compile Include="IReportItemProcess.cs" />
     <Compile Include="ISettingsProcess.cs" />
     <Compile Include="ITransactionProcess.cs" />

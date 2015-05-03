@@ -43,6 +43,11 @@
             return new WorkProcessDb();
         }
 
+        public static IWorksInGallery GerWorksInGalleryProcess()
+        {
+            return new WorksInGalleryProcessDb();
+        }
+
         public static ITransactionProcess GetTransactionProcess()
         {
             return new TransactionProcessDb();

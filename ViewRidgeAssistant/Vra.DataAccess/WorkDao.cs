@@ -65,31 +65,6 @@ namespace Vra.DataAccess
             return works;
         }
 
-        // получить выставленные на продажу картины
-        public IEnumerable<Work> GetInGallery()
-        {
-            IList<Work> works = new List<Work>();
-
-            using (var conn = GetConnection())
-            {
-                conn.Open();
-
-                using (var cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = "SELECT WorkID, ArtistID, Title, Copy, Description " + "FROM WORK " + "WHERE WorkID in ( " + "SELECT WorkID " + "FROM TRANS " + "WHERE CustomerID is NULL " + ")";
-
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        while (dataReader.Read())
-                        {
-                            works.Add(LoadWork(dataReader));
-                        }
-                    }
-                }
-            }
-            return works;
-        }
-
         public void Add(Work work)
         {
             using (var conn = GetConnection())

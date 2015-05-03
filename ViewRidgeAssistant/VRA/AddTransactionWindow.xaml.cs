@@ -16,7 +16,8 @@ namespace VRA
     public partial class AddTransactionWindow
     {
         private readonly IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
-        private readonly IList<WorkDto> FreeForSale = ProcessFactory.GetWorkProcess().GetListInGallery(); // выбираем все работы доступные для продаж
+        // Выбираем все работы, доступные для продаж.
+        private readonly IList<WorksInGalleryDto> FreeForSale = ProcessFactory.GerWorksInGalleryProcess().GetList();
         private readonly IList<WorkDto> FreeForPurchase = new List<WorkDto>();
 
         private int id;
@@ -47,11 +48,11 @@ namespace VRA
             this.loadWork(Trans.Work.Title);
         }
 
-        private bool workatGalery(WorkDto work)
+        private bool workAtGalery(WorkDto work)
         {
             bool result = false;
 
-            foreach (WorkDto w in FreeForSale)
+            foreach (WorksInGalleryDto w in FreeForSale)
             {
                 if (w.Id == work.Id) { result = true; break; }
             }
@@ -64,9 +65,9 @@ namespace VRA
             {
                 bool inList = false;
 
-                foreach (WorkDto W in FreeForSale)
+                foreach (var t in FreeForSale)
                 {
-                    if (W.Id == w.Id)
+                    if (t.Work.Id == w.Id)
                     {
                         inList = true; break;
                     }
@@ -138,7 +139,7 @@ namespace VRA
 
             if (status == "sale")
             {
-                if (!workatGalery(SelectedWork))
+                if (!workAtGalery(SelectedWork))
                 {
                     MessageBox.Show("Запрашиваемая работа уже продана!"); return;
                 }
@@ -146,7 +147,7 @@ namespace VRA
 
             if (status == "purchase")
             {
-                if (workatGalery(SelectedWork))
+                if (workAtGalery(SelectedWork))
                 {
                     MessageBox.Show("Запрашиваемая работа уже находится в галерее!"); return;
                 }
@@ -264,7 +265,21 @@ namespace VRA
 
             if (status == "sale")
             {
-                this.cbWork.ItemsSource = this.FreeForSale;
+                IList<WorkDto> forSale = new List<WorkDto>();
+
+                foreach (WorksInGalleryDto works in FreeForSale)
+                {
+                    forSale.Add(new WorkDto
+                    {
+                        Artist = works.Artist, 
+                        Copy = works.Work.Copy, 
+                        Description = works.Work.Description,
+                        Id = works.Work.Id,
+                        Title = works.Work.Title
+                    });
+                }
+                this.cbWork.ItemsSource = forSale;
+                
             }
         }
 

@@ -114,29 +114,23 @@ namespace VRA.BusinessLayer
 
         public string genHtmlWorksInGallery(string rep)
         {
-            List<object> works = ProcessFactory.GetWorkProcess().GetListInGallery().Cast<object>().ToList();
-            List<object> trans = ProcessFactory.GetTransactionProcess().GetListInGallery().Cast<object>().ToList();
+            List<object> works = ProcessFactory.GerWorksInGalleryProcess().GetList().Cast<object>().ToList();
 
             string res_html =
                 "<tr><td><b>Код</b></td><td><b>Название</b></td><td><b>Художник</b></td><td><b>Цена</b></td><td><b>Описание</b></td></tr>";
 
-            foreach (var w_item in works)
+            foreach (var work in works)
             {
-                WorkDto WorkItem = (WorkDto) w_item;
-                foreach (var t_item in trans)
-                {
-                    TransactionDto TransItem = (TransactionDto) t_item;
-                    if (WorkItem.Id == TransItem.Work.Id)
-                    {
-                        ArtistDto ArtistItem = ProcessFactory.GetArtistProcess().Get(WorkItem.Artist.Id);
+                WorksInGalleryDto WorkItem = (WorksInGalleryDto) work;
+                res_html += "<tr><td><p>" + WorkItem.Id + "</p></td>";
+                // Если заполнено поле "Копия", то дописываем его к имени.
+                res_html += WorkItem.Work.Copy != string.Empty
+                    ? "<td><p>" + WorkItem.Work.Title + " (" + WorkItem.Work.Copy + ")" + "</p></td>"
+                    : "<td><p>" + WorkItem.Work.Title + "</p></td>";
 
-                        res_html += "<tr><td><p>" + WorkItem.Id + "</p></td>";
-                        res_html += "<td><p>" + WorkItem.Title + "/" + (WorkItem.Copy ?? "") + "</p></td>";
-                        res_html += "<td><p>" + ArtistItem.Name + "</p></td>";
-                        res_html += "<td><p>" + TransItem.AskingPrice + "</p></td>";
-                        res_html += "<td><p>" + (WorkItem.Description ?? "") + "</p></td></tr>";
-                    }
-                }
+                res_html += "<td><p>" + WorkItem.Artist.Name + "</p></td>";
+                res_html += "<td><p>" + WorkItem.AskingPrice + "</p></td>";
+                res_html += "<td><p>" + (WorkItem.Work.Description ?? "") + "</p></td></tr>";
             }
             res_html = rep.Replace("[VRA_TABLE_REPORT]", res_html);
             return res_html;

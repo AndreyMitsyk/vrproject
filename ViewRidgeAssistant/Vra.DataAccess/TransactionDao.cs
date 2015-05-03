@@ -58,27 +58,6 @@ namespace Vra.DataAccess
             return Transactions;
         }
 
-        public IEnumerable<Transaction> GetInGallery()
-        {
-            List<Transaction> Transactions = new List<Transaction>();
-            using (var conn = GetConnection())
-            {
-                conn.Open();
-                using (var cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = "SELECT TransactionID, CustomerID, WorkID, DateAcquired, AcquisitionPrice, PurchaseDate, SalesPrice, AskingPrice FROM TRANS WHERE CustomerID is NULL";
-                    using (var dataReader = cmd.ExecuteReader())
-                    {
-                        while (dataReader.Read())
-                        {
-                            Transactions.Add(LoadTransaction(dataReader));
-                        }
-                    }
-                }
-            }
-            return Transactions;
-        }
-
         public Transaction Get(int id)
         {
             using (var conn = GetConnection())

@@ -218,6 +218,7 @@ namespace VRA.BusinessLayer.Converters
                 TransactionID = trans.TransID,
                 Customer = Convert(DaoFactory.GetCustomerDao().Get(trans.CustomerID)),
                 Work = Convert(DaoFactory.GetWorkDao().Get(trans.WorkId)),
+                
                 DateAcquired = trans.DateAcquired,
                 AcquisitionPrice = trans.AcquisitionPrice,
                 PurchaseDate = trans.PurchaseDate,
@@ -225,6 +226,31 @@ namespace VRA.BusinessLayer.Converters
                 AskingPrice = trans.AskingPrice
             };
             return transDto;
+        }
+
+        private static WorksInGalleryDto Convert(WorkInGallery worksInGallery)
+        {
+            if (worksInGallery == null) return null;
+            WorksInGalleryDto workInGallery = new WorksInGalleryDto
+            {
+                Id = worksInGallery.Id,
+                Work = Convert(DaoFactory.GetWorkDao().Get(worksInGallery.WorkId)),
+                Artist = Convert(DaoFactory.GetArtistDao().Get(worksInGallery.ArtistId)),
+                AskingPrice = worksInGallery.AskingPrice
+            };
+            return workInGallery;
+        }
+
+        public static IList<WorksInGalleryDto> Convert(IEnumerable<WorkInGallery> worksInGallery)
+        {
+            if (worksInGallery == null) return null;
+
+            IList<WorksInGalleryDto> workInGallerieDtos = new List<WorksInGalleryDto>();
+            foreach (var work in worksInGallery)
+            {
+                workInGallerieDtos.Add(Convert(work));
+            }
+            return workInGallerieDtos;
         }
 
         public static Transaction Convert(TransactionDto transDto)

@@ -27,6 +27,11 @@
             return new WorkDao();
         }
 
+        public static IWorkInGalleryDao GetWorkInGalleryDao()
+        {
+            return new WorkInGalleryDao();
+        }
+
         public static ITransactionDao GetTransactionDao()
         {
             return new TransactionDao();

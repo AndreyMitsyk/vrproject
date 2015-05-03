@@ -7,7 +7,6 @@ namespace Vra.DataAccess
     {
         Work Get(int id);
         IEnumerable<Work> GetAll();
-        IEnumerable<Work> GetInGallery();
         void Add(Work work);
         void Update(Work work);
         void Delete(int id);

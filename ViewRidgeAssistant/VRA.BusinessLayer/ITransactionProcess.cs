@@ -6,7 +6,6 @@ namespace VRA.BusinessLayer
     public interface ITransactionProcess
     {
         IList<TransactionDto> GetList();
-        IEnumerable<TransactionDto> GetListInGallery();
         TransactionDto Get(int id);
         void Add(TransactionDto Trans);
         void Update(TransactionDto Trans);

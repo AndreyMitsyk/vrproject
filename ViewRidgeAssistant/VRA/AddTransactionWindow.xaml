@@ -39,7 +39,7 @@
         <DatePicker x:Name="dpPurchase" Grid.Row="5" Grid.Column="1" Margin="3"/>
         <TextBox x:Name="tbSalesPrice" Grid.Row="6" Grid.Column="1" Margin="3"/>
         <TextBox x:Name="tbAskingPrice" Grid.Row="7" Grid.Column="1" Margin="3"/>
-        <TextBlock Grid.Row="8" Grid.ColumnSpan="2" FontStyle="Italic" FontSize="11" TextAlignment="Center"> обязательные для заполнение поля помечены "*"</TextBlock>
+        <TextBlock Grid.Row="8" Grid.ColumnSpan="2" Grid.Column="0" FontStyle="Italic" FontSize="11" TextAlignment="Center"> обязательные для заполнение поля помечены "*"</TextBlock>
         <Button x:Name="btnSave" Grid.Row="9" Grid.Column="0" Content="Сохранить" Margin="3" Click="btnSave_Click" />
         <Button x:Name="btnCancel" Grid.Row="9" Grid.Column="1" Content="Отмена" Margin="3" Click="btnCancel_Click" />
     </Grid>

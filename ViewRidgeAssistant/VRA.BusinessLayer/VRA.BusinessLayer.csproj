@@ -57,6 +57,7 @@
     <Compile Include="ISettingsProcess.cs" />
     <Compile Include="ITransactionProcess.cs" />
     <Compile Include="IWorkProcess.cs" />
+    <Compile Include="IWorksInGallery.cs" />
     <Compile Include="NationProcess.cs" />
     <Compile Include="ProcessFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="SettingsProcess.cs" />
     <Compile Include="TransactionProcessDb.cs" />
     <Compile Include="WorkProcessDb.cs" />
+    <Compile Include="WorksInGalleryProcessDb.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vra.DataAccess\Vra.DataAccess.csproj">

@@ -19,11 +19,6 @@ namespace VRA.BusinessLayer
             return DtoConverter.Convert(_TransDao.GetAll());
         }
 
-        public IEnumerable<TransactionDto> GetListInGallery()
-        {
-            return DtoConverter.Convert(_TransDao.GetInGallery());
-        }
-
         public TransactionDto Get(int id)
         {
             return DtoConverter.Convert(_TransDao.Get(id));

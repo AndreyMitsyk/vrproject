@@ -16,9 +16,8 @@ namespace VRA
     public partial class AddTransactionWindow
     {
         private readonly IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
-        // Выбираем все работы, доступные для продаж.
-        private readonly IList<WorksInGalleryDto> FreeForSale = ProcessFactory.GerWorksInGalleryProcess().GetList();
-        private readonly IList<WorkDto> FreeForPurchase = new List<WorkDto>();
+
+        private IList<WorkDto> FreeForPurchase = new List<WorkDto>();
 
         private int id;
         public string status;
@@ -50,34 +49,41 @@ namespace VRA
 
         private bool workAtGalery(WorkDto work)
         {
-            bool result = false;
-
-            foreach (WorksInGalleryDto w in FreeForSale)
-            {
-                if (w.Id == work.Id) { result = true; break; }
-            }
-            return result;
+            // Проверяем, содержится ли работа в списке работ, доступных для продаж.
+            return WorkDtos().Contains(work);
         }
 
         private void GetWorksWithCustomers()
         {
-            foreach (WorkDto w in Works)
+            // Вычитаем из множества работ множество работ, доступных для продаж.
+            // Получаем список купленных работ.
+            IEnumerable<WorkDto> forPurchase = Works.Except(WorkDtos());
+            FreeForPurchase = forPurchase.ToList();
+        }
+
+        /// <summary>
+        /// Список работ, готовых к продаже
+        /// </summary>
+        /// <returns>Работы, не имеющие Customer и готовые к продаже</returns>
+        private IEnumerable<WorkDto> WorkDtos()
+        {
+            // Выбираем все работы, доступные для продаж.
+            IList<WorksInGalleryDto> FreeForSale = ProcessFactory.GerWorksInGalleryProcess().GetList();
+
+            IList<WorkDto> forSale = new List<WorkDto>();
+
+            foreach (WorksInGalleryDto works in FreeForSale)
             {
-                bool inList = false;
-
-                foreach (var t in FreeForSale)
+                forSale.Add(new WorkDto
                 {
-                    if (t.Work.Id == w.Id)
-                    {
-                        inList = true; break;
-                    }
-                }
-
-                if (!inList)
-                {
-                    this.FreeForPurchase.Add(w);
-                }
+                    Artist = works.Artist,
+                    Copy = works.Work.Copy,
+                    Description = works.Work.Description,
+                    Id = works.Work.Id,
+                    Title = works.Work.Title
+                });
             }
+            return forSale;
         }
 
         private void loadWork(string title)
@@ -139,7 +145,7 @@ namespace VRA
 
             if (status == "sale")
             {
-                if (!workAtGalery(SelectedWork))
+                if (workAtGalery(SelectedWork))
                 {
                     MessageBox.Show("Запрашиваемая работа уже продана!"); return;
                 }
@@ -265,20 +271,7 @@ namespace VRA
 
             if (status == "sale")
             {
-                IList<WorkDto> forSale = new List<WorkDto>();
-
-                foreach (WorksInGalleryDto works in FreeForSale)
-                {
-                    forSale.Add(new WorkDto
-                    {
-                        Artist = works.Artist, 
-                        Copy = works.Work.Copy, 
-                        Description = works.Work.Description,
-                        Id = works.Work.Id,
-                        Title = works.Work.Title
-                    });
-                }
-                this.cbWork.ItemsSource = forSale;
+                this.cbWork.ItemsSource = WorkDtos();
                 
             }
         }
@@ -304,7 +297,7 @@ namespace VRA
             IList<TransactionDto> transes = ProcessFactory.GetTransactionProcess().GetList();
             foreach (TransactionDto t in transes)
             {
-                if (t.Work.Id == workId)
+                if (t.Work.Id == workId & t.Customer == null)
                 {
                     return t.TransactionID;
                 }

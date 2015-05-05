@@ -680,7 +680,22 @@ namespace VRA
                     break;
             }
 
-            ProcessFactory.GetReport().fillExcelTableByType(grid, status);
+            SaveFileDialog saveXlsxDialog = new SaveFileDialog
+            {
+                DefaultExt = ".xlsx",
+                Filter = "Excel Files (.xlsx)|*.xlsx",
+                AddExtension = true,
+                FileName = status
+            };
+
+            bool? result = saveXlsxDialog.ShowDialog();
+
+            if (result == true)
+            {
+                FileInfo xlsxFile = new FileInfo(saveXlsxDialog.FileName);
+
+                ProcessFactory.GetReport().fillExcelTableByType(grid, status, xlsxFile);
+            }
         }
 
         private void HtmlWorksInGalleryButton_Click(object sender, RoutedEventArgs e)

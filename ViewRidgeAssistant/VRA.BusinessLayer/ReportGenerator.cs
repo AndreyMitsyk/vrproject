@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Globalization;
 using System.Threading;
 using System.Windows;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using VRA.Dto;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace VRA.BusinessLayer
 {
     public class ReportGenerator : IReportGenerator
     {
 
-        public void fillExcelTableByType(IEnumerable<object> grid, string status)
+        public void fillExcelTableByType(IEnumerable<object> grid, string status, FileInfo xlsxFile)
         {
             if (grid != null)
             {
-                Excel.Application ExcelApp = new Excel.Application();
-                Excel.Workbook ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
-                Excel.Worksheet excel = (Excel.Worksheet) ExcelWorkBook.Worksheets.Item[1];
+                ExcelPackage pck = new ExcelPackage(xlsxFile);
+
+                var excel = pck.Workbook.Worksheets.Add(status);
 
                 int x = 1;
                 int y = 1;
@@ -29,20 +31,21 @@ namespace VRA.BusinessLayer
                 cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
 
                 // первая строка (шапка таблицы) -- жирным стилем
-                excel.Cells[y, 1].EntireRow.Font.Bold = true;
+                excel.Cells["A1:Z1"].Style.Font.Bold = true;
+
 
                 // вырванивание текста в ячейках -- по левому краю
-                excel.Cells.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
+                excel.Cells.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
 
                 // Устанавливает формат ячеек
-                excel.Cells.NumberFormat = "General";
+                excel.Cells.Style.Numberformat.Format = "General";
 
-            /* Пример с перебором Properties объекта. Данный пример демонстрирует, как можно
-             * перебирая объявленные в данном классе property, записывать их в Excel. 
-             * При этом, последовательность полей соответствует последовательности их
-             * объявления в соответствующем используемом классе.
-             * Данный вариант удобен автоматическим добавлением новых / удалением полей в итоговой таблице 
-             * при изменении целевого класса. */
+                /* Пример с перебором Properties объекта. Данный пример демонстрирует, как можно
+                 * перебирая объявленные в данном классе property, записывать их в Excel. 
+                 * При этом, последовательность полей соответствует последовательности их
+                 * объявления в соответствующем используемом классе.
+                 * Данный вариант удобен автоматическим добавлением новых / удалением полей в итоговой таблице 
+                 * при изменении целевого класса. */
 
                 Object dtObj = new Object(); // пустой объект для получения списка property
 
@@ -71,7 +74,7 @@ namespace VRA.BusinessLayer
                 // генерация шапки таблицы
                 foreach (var prop in dtObj.GetType().GetProperties())
                 {
-                    excel.Cells[y, x] = prop.Name.Trim();
+                    excel.Cells[y, x].Value = prop.Name.Trim();
                     x++;
                 }
 
@@ -84,7 +87,7 @@ namespace VRA.BusinessLayer
                     foreach (var prop in itemObj.GetType().GetProperties())
                     {
                         object t = prop.GetValue(itemObj, null);
-                        String val;
+                        object val;
 
                         if (t == null)
                             val = "";
@@ -101,13 +104,15 @@ namespace VRA.BusinessLayer
                             if (t is WorkDto)
                                 val = ((WorkDto) t).Title;
                         }
-                        excel.Cells[y, x] = val.Trim().Replace("-", "");
+                        excel.Cells[y, x].Value = val;
                         x++;
                     }
                 }
                 // Устанавливаем размер колонок по ширине содержимого.
-                excel.Columns.AutoFit();
-                ExcelApp.Visible = true;
+                excel.Cells.AutoFitColumns();
+
+                // Сохраняем файл.
+                pck.Save();
             }
             else MessageBox.Show("Данные не загружены!");
         }

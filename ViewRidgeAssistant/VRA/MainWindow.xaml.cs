@@ -738,6 +738,12 @@ namespace VRA
             var window = new ReportWindow();
             window.Show();
         }
+
+        private void QueryButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new QueryWindow();
+            window.Show();
+        }
         #endregion
     }
 }

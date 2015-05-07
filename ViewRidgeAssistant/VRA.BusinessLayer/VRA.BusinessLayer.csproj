@@ -37,6 +37,8 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtistProcessDb.cs" />
@@ -47,6 +49,7 @@
     <Compile Include="IInterests.cs" />
     <Compile Include="INationProcess.cs" />
     <Compile Include="InterestsProcessDb.cs" />
+    <Compile Include="IQueryProcess.cs" />
     <Compile Include="IReportGenerator.cs" />
     <Compile Include="IReportItemProcess.cs" />
     <Compile Include="ISettingsProcess.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="NationProcess.cs" />
     <Compile Include="ProcessFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcess.cs" />
     <Compile Include="ReportGenerator.cs" />
     <Compile Include="ReportItemProcess.cs" />
     <Compile Include="SettingsProcess.cs" />

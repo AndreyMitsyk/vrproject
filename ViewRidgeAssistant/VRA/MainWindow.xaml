@@ -76,6 +76,7 @@
                 <MenuItem Name="HtmlWorksInGalleryButton" Header="Прайс-лист работ" Click="HtmlWorksInGalleryButton_Click" />
                 <MenuItem Name="GraphReportButton" Header="Отчет по продажам" Click="GraphReportButton_Click" />
             </MenuItem>
+            <MenuItem Name = "QueryButton" Header="Создать запрос" Click="QueryButton_Click" ></MenuItem>
         </Menu>
         <StatusBar Name="statusBar" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="1,0"  VerticalAlignment="Bottom" Height="30">
             <Label Name ="statusLabel" Content="Работа с таблицей:" Visibility="Visible">

@@ -66,5 +66,10 @@
         {
             return new ReportItemProcess();
         }
+
+        public static IQueryProcess GetQueryProcess()
+        {
+            return new QueryProcess();
+        }
     }
 }

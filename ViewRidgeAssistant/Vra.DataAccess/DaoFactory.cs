@@ -36,5 +36,10 @@
         {
             return new TransactionDao();
         }
+
+        public static IQueryDao GetQueryDao()
+        {
+            return new QueryDao();
+        }
     }
 }

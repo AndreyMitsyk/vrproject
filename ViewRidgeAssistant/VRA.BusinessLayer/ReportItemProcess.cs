@@ -22,7 +22,7 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Day+"."+d.Date.Month+"."+d.Date.Year, count = 0, price = 0};
+                            ReportItemDto repItem = new ReportItemDto { date = d.Date.ToString("dd-MM-yyyy"), count = 0, price = 0 };
 
                             foreach (var item in Items)
                             {
@@ -48,7 +48,7 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto { date = d.Date.Year+ "." + d.Date.Month , count = 0, price = 0 };
+                            ReportItemDto repItem = new ReportItemDto { date = d.Date.ToString("Y") , count = 0, price = 0 };
 
                             foreach (var item in Items)
                             {

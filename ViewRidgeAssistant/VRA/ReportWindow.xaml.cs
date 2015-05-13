@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Collections.ObjectModel;
 using VRA.Dto;
 using VRA.BusinessLayer;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace VRA
 {
@@ -13,6 +15,10 @@ namespace VRA
     {
         private ObservableCollection<ReportItemDto> collection = new ObservableCollection<ReportItemDto>();
 
+        private readonly List<decimal> axisYDataSales = new List<decimal>();
+        private readonly List<decimal> axisYDataPurchase = new List<decimal>();
+        private readonly List<string> axisXData = new List<string>();
+
         private void DateCompare()
         {
             if ((Convert.ToDateTime(datePicker1.Text)) >= Convert.ToDateTime(datePicker2.Text))
@@ -21,39 +27,109 @@ namespace VRA
             }
         }
 
-        private void GraphDraw()
+        /// <summary>
+        /// Действия при загрузке формы.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Т.к. все графики находятся в пределах области построения, создадим ее.
+            chart.ChartAreas.Add(new ChartArea("Default"));
+
+            // Добавим график, и назначим его в ранее созданную область "Default".
+            chart.Series.Add(new Series("Проданные"));
+            chart.Series["Проданные"].ChartArea = "Default";
+            chart.Series.Add(new Series("Купленные"));
+            chart.Series["Купленные"].ChartArea = "Default";
+
+            // Определяем легенду.
+            chart.Legends.Add(new Legend("Legend"));
+            chart.Legends["Legend"].DockedToChartArea = "Default";
+            chart.Series["Проданные"].Legend = "Legend";
+            chart.Series["Купленные"].Legend = "Legend";
+            chart.Series["Купленные"].IsVisibleInLegend = false;
+            chart.Series["Проданные"].IsVisibleInLegend = false;
+        }
+
+        /// <summary>
+        /// Выбор типа графика.
+        /// </summary>
+        private void GraphType()
         {
             if (radioGist.IsChecked != null && radioGist.IsChecked.Value)
             {
-                LineChart.Visibility = Visibility.Hidden;
-                ColumnChart.ItemsSource = collection;
-                ColumnChart.Visibility = Visibility.Visible;
+                // Определяем вид графиков.
+                chart.Series["Проданные"].ChartType = SeriesChartType.Column;
+                chart.Series["Купленные"].ChartType = SeriesChartType.Column;
             }
 
             if (radioSpline.IsChecked != null && radioSpline.IsChecked.Value)
             {
-                ColumnChart.Visibility = Visibility.Hidden;
-                LineChart.ItemsSource = collection;
-                LineChart.Visibility = Visibility.Visible;
+                // Определяем вид графиков.
+                chart.Series["Проданные"].ChartType = SeriesChartType.Line;
+                chart.Series["Купленные"].ChartType = SeriesChartType.Line;
             }
+        }
+
+        /// <summary>
+        /// Построение графиков.
+        /// </summary>
+        private void DrawGraph()
+        {
+            // Очищаем старые данные.
+            axisXData.Clear();
+            chart.Series["Проданные"].Points.Clear();
+            chart.Series["Купленные"].Points.Clear();
+
+            // Добавляем подписи по оси X.
+            foreach (var item in collection)
+            {
+                axisXData.Add(item.date);
+            }
+
+            // Настраиваем легенду.
+            if ((axisYDataSales.Count != 0) & (axisYDataPurchase.Count != 0))
+            {
+                chart.Series["Купленные"].IsVisibleInLegend = true;
+                chart.Series["Проданные"].IsVisibleInLegend = true;
+            }
+            else
+            {
+                chart.Series["Купленные"].IsVisibleInLegend = false;
+                chart.Series["Проданные"].IsVisibleInLegend = false;
+            }
+
+            // Строим графики.
+            if (axisYDataSales.Count != 0)
+                chart.Series["Проданные"].Points.DataBindXY(axisXData, axisYDataSales);
+
+            if (axisYDataPurchase.Count != 0)
+                chart.Series["Купленные"].Points.DataBindXY(axisXData, axisYDataPurchase);
         }
 
         private void FillCollection()
         {
+            axisYDataSales.Clear();
+            axisYDataPurchase.Clear();
             if (radioSales.IsChecked != null && radioSales.IsChecked.Value)
             {
                 // если запрошена статистика по проданным
+
                 if (radioDay.IsChecked != null && radioDay.IsChecked.Value)
                 {
                     TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
                     if (ts.Days > 10)
                     {
-                        MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней "); return;
+                        MessageBox.Show(
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней ");
+                        return;
                     }
 
                     collection.Clear();
-                    collection = ProcessFactory.GetReportProcess().GetSaled("day", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                    collection = ProcessFactory.GetReportProcess()
+                        .GetSaled("day", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
                 if (radioMounth.IsChecked != null && radioMounth.IsChecked.Value)
@@ -62,11 +138,14 @@ namespace VRA
 
                     if (ts.Days/30 > 10)
                     {
-                        MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 месяцев "); return;
+                        MessageBox.Show(
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 месяцев ");
+                        return;
                     }
 
                     collection.Clear();
-                    collection = ProcessFactory.GetReportProcess().GetSaled("month", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                    collection = ProcessFactory.GetReportProcess()
+                        .GetSaled("month", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
                 if (radioYear.IsChecked != null && radioYear.IsChecked.Value)
@@ -84,52 +163,73 @@ namespace VRA
                     collection.Clear();
                     collection = ProcessFactory.GetReportProcess()
                         .GetSaled("year", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+
+                }
+
+                // Заполнение коллекции проданных
+                foreach (var item in collection)
+                {
+                    axisYDataSales.Add(item.price);
                 }
             }
-            else
+            if (radioPurchase.IsChecked != null && radioPurchase.IsChecked.Value)
             {
                 // если запрашивают статистику по купленным
 
-                // если запрошена статистика по проданным
                 if (radioDay.IsChecked != null && radioDay.IsChecked.Value)
                 {
-                    TimeSpan ts = datePicker2.DisplayDate.Subtract(Convert.ToDateTime(datePicker1.Text));
+                    TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
                     if (ts.Days > 10)
                     {
-                        MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней "); return;
+                        MessageBox.Show(
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней ");
+                        return;
                     }
 
                     collection.Clear();
-                    collection = ProcessFactory.GetReportProcess().GetPurchased("day", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                    collection = ProcessFactory.GetReportProcess()
+                        .GetPurchased("day", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
                 }
 
                 if (radioMounth.IsChecked != null && radioMounth.IsChecked.Value)
                 {
-                    int month = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / 30;
+                    TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
-                    if (month > 10)
+                    if (ts.Days/30 > 10)
                     {
-                        MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней "); return;
+                        MessageBox.Show(
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 месяцев ");
+                        return;
                     }
 
                     collection.Clear();
-                    collection = ProcessFactory.GetReportProcess().GetPurchased("month", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                    collection = ProcessFactory.GetReportProcess()
+                        .GetPurchased("month", Convert.ToDateTime(datePicker1.Text),
+                            Convert.ToDateTime(datePicker2.Text));
                 }
 
                 if (radioYear.IsChecked != null && radioYear.IsChecked.Value)
                 {
-                    int year = (datePicker1.DisplayDate - Convert.ToDateTime(datePicker1.Text)).Days / (30 * 12);
+                    TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
+                    if (ts.Days/(30*12) > 10)
                     {
-                        if (year > 10)
-                        {
-                            MessageBox.Show("Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней "); return;
-                        }
+                        MessageBox.Show(
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 лет ");
+                        return;
                     }
 
+
                     collection.Clear();
-                    collection = ProcessFactory.GetReportProcess().GetPurchased("year", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                    collection = ProcessFactory.GetReportProcess()
+                        .GetPurchased("year", Convert.ToDateTime(datePicker1.Text), Convert.ToDateTime(datePicker2.Text));
+                }
+
+                // Заполнение коллекции купленных
+                foreach (var item in collection)
+                {
+                    axisYDataPurchase.Add(item.price);
                 }
             }
         }
@@ -143,7 +243,9 @@ namespace VRA
         {
             DateCompare();
             FillCollection();
-            GraphDraw();
+            GraphType();
+            DrawGraph();
         }
+
     }
 }

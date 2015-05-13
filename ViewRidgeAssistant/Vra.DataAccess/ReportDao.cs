@@ -103,7 +103,7 @@ namespace Vra.DataAccess
                 using (var cmd = conn.CreateCommand())
                 {
                     //Задаём текст команды
-                    cmd.CommandText = "select CONVERT(date, DateAcquired, 105) as mydate, isnull(SUM(AcquisitionPrice), 0.0) as mysum, ISNULL(count(AcquisitionPrice), 0.0)as mycount from TRANS where DATEPART(Year, DateAcquired) between DATEPART(Year, @start) and DATEPART(Year, @stop) group by CONVERT(date, PurchaseDate, 105)";
+                    cmd.CommandText = "select CONVERT(date, DateAcquired, 105) as mydate, isnull(SUM(AcquisitionPrice), 0.0) as mysum, ISNULL(count(AcquisitionPrice), 0.0)as mycount from TRANS where DATEPART(Year, DateAcquired) between DATEPART(Year, @start) and DATEPART(Year, @stop) group by CONVERT(date, DateAcquired, 105)";
                     //Добавляем значение параметра
                     cmd.Parameters.AddWithValue("@start", start);
                     cmd.Parameters.AddWithValue("@stop", end);
@@ -197,7 +197,7 @@ namespace Vra.DataAccess
                 using (var cmd = conn.CreateCommand())
                 {
                     //Задаём текст команды
-                    cmd.CommandText = "select CONVERT(date, PurchaseDate, 105)e as mydate, isnull(SUM(SalesPrice), 0.0) as mysum, ISNULL(count(SalesPrice), 0.0) as mycount from TRANS where DATEPART(Year, DateAcquired) between DATEPART(Year, @start) and DATEPART(Year, @stop) group by CONVERT(date, PurchaseDate, 105)";
+                    cmd.CommandText = "select CONVERT(date, PurchaseDate, 105) as mydate, isnull(SUM(SalesPrice), 0.0) as mysum, ISNULL(count(SalesPrice), 0.0) as mycount from TRANS where DATEPART(Year, DateAcquired) between DATEPART(Year, @start) and DATEPART(Year, @stop) group by CONVERT(date, PurchaseDate, 105)";
                     //Добавляем значение параметра
                     cmd.Parameters.AddWithValue("@start", start);
                     cmd.Parameters.AddWithValue("@stop", end);

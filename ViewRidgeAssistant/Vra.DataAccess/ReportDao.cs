@@ -20,7 +20,7 @@ namespace Vra.DataAccess
             }
             catch (Exception)
             {
-                report.date = DateTime.Now;
+                report.date = DateTime.Now.Date;
             }
             report.price = reader.GetDecimal(reader.GetOrdinal("mysum"));
             report.count = reader.GetInt32(reader.GetOrdinal("mycount"));

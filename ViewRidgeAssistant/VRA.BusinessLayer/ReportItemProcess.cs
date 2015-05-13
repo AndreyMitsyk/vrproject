@@ -22,13 +22,14 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Day.ToString(), count = 0, price = 0};
+                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Day+"."+d.Date.Month+"."+d.Date.Year, count = 0, price = 0};
 
                             foreach (var item in Items)
                             {
                                 if (Convert.ToDateTime(item.date).Date == d)
                                 {
-                                    repItem = item;
+                                    repItem.count += item.count;
+                                    repItem.price += item.price;
                                 }
 
                             }
@@ -47,7 +48,7 @@ namespace VRA.BusinessLayer
                         DateTime d = start;
                         while (d <= stop)
                         {
-                            ReportItemDto repItem = new ReportItemDto {date = d.Date.Month.ToString(), count = 0, price = 0};
+                            ReportItemDto repItem = new ReportItemDto { date = d.Date.Year+ "." + d.Date.Month , count = 0, price = 0 };
 
                             foreach (var item in Items)
                             {
@@ -56,8 +57,6 @@ namespace VRA.BusinessLayer
 
                                     repItem.count += item.count;
                                     repItem.price += item.price;
-
-                                    //  Items.Remove(item);
                                 }
 
                             }
@@ -83,8 +82,6 @@ namespace VRA.BusinessLayer
                                 {
                                     repItem.count += item.count;
                                     repItem.price += item.price;
-
-                                    //  Items.Remove(item);
                                 }
 
                             }

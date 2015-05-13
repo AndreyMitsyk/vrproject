@@ -10,6 +10,7 @@ namespace VRA.BusinessLayer
         /// </summary>
         /// <returns>Work list in data base</returns>
         IList<WorkDto> GetList();
+        IList<WorkDto> GetListInGallery();
         void Add(WorkDto work);
         void Update(WorkDto work);
 

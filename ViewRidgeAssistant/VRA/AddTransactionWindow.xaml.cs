@@ -16,6 +16,7 @@ namespace VRA
     public partial class AddTransactionWindow
     {
         private readonly IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
+        private readonly IList<WorkDto> FreeForSale = ProcessFactory.GetWorkProcess().GetListInGallery();
 
         private IList<WorkDto> FreeForPurchase = new List<WorkDto>();
 
@@ -50,45 +51,15 @@ namespace VRA
         private bool workAtGalery(WorkDto work)
         {
             // Проверяем, содержится ли работа в списке работ, доступных для продаж.
-            return WorkDtos().Contains(work);
+            return FreeForSale.Contains(work);
         }
 
         private void GetWorksWithCustomers()
         {
             // Вычитаем из множества работ множество работ, доступных для продаж.
             // Получаем список купленных работ.
-            IEnumerable<WorkDto> forPurchase = Works.Except(WorkDtos());
+            IEnumerable<WorkDto> forPurchase = Works.Except(FreeForSale);
             FreeForPurchase = forPurchase.ToList();
-        }
-
-        /// <summary>
-        /// Список работ, готовых к продаже
-        /// </summary>
-        /// <returns>Работы, не имеющие Customer и готовые к продаже</returns>
-        private IEnumerable<WorkDto> WorkDtos()
-        {
-            // Выбираем все работы, доступные для продаж.
-            IList<WorksInGalleryDto> FreeForSale = ProcessFactory.GerWorksInGalleryProcess().GetList();
-
-            IList<WorkDto> forSale = new List<WorkDto>();
-
-            foreach (WorksInGalleryDto works in FreeForSale)
-            {
-                // Получаем художника.
-                var artists = ProcessFactory.GetArtistProcess().GetList();
-                ArtistDto WorkArtist = artists.FirstOrDefault(artist => artist.Name == works.Artist);
-                
-                // Создаем список работ.
-                forSale.Add(new WorkDto
-                {
-                    Artist = WorkArtist,
-                    Copy = works.Copy,
-                    Description = works.Description,
-                    Id = works.Id,
-                    Title = works.Work
-                });
-            }
-            return forSale;
         }
 
         private void loadWork(string title)
@@ -276,7 +247,7 @@ namespace VRA
 
             if (status == "sale")
             {
-                this.cbWork.ItemsSource = WorkDtos();
+                this.cbWork.ItemsSource = FreeForSale;
                 
             }
         }

@@ -17,6 +17,11 @@ namespace VRA.BusinessLayer
             return DtoConverter.Convert(_workDao.GetAll());
         }
 
+        public IList<WorkDto> GetListInGallery()
+        {
+            return DtoConverter.Convert(_workDao.GetInGallery());
+        }
+
         public void Add(WorkDto work)
         {
             _workDao.Add(DtoConverter.Convert(work));

@@ -313,47 +313,42 @@ namespace VRA
                         search.ShowDialog();
                         if (search.exec)
                         {
-                            this.dgArtists.Visibility = Visibility.Hidden;
                             this.dgArtists.ItemsSource = search.FindedArtists;
-                            this.dgArtists.Visibility = Visibility.Visible;
                         }
                         break;
+
                     case "Customer":
                         search.ShowDialog();
                         if (search.exec)
                         {
-                            this.dgCustomers.Visibility = Visibility.Hidden;
                             this.dgCustomers.ItemsSource = search.FindedCustomers;
-                            this.dgCustomers.Visibility = Visibility.Visible;
                         }
                         break;
+
                     case "Work":
                         search.ShowDialog();
                         if (search.exec)
                         {
-                            this.dgWork.Visibility = Visibility.Hidden;
                             this.dgWork.ItemsSource = search.FindedWorks;
-                            this.dgWork.Visibility = Visibility.Visible;
                         }
                         break;
+
                     case "Trans":
                         search.ShowDialog();
                         if (search.exec)
                         {
-                            this.dgTrans.Visibility = Visibility.Hidden;
                             this.dgTrans.ItemsSource = search.FindedTransactions;
-                            this.dgTrans.Visibility = Visibility.Visible;
                         }
                         break;
+
                     case "Interests":
                         search.ShowDialog();
                         if (search.exec)
                         {
-                            this.dgInterests.Visibility = Visibility.Hidden;
                             this.dgInterests.ItemsSource = search.FindedInterests;
-                            this.dgInterests.Visibility = Visibility.Visible;
                         }
                         break;
+
                     default: MessageBox.Show("Для поиска необходимо выбрать таблицу!"); break;
                 }
             }

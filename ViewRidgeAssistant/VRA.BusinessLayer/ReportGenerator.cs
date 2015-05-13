@@ -129,13 +129,13 @@ namespace VRA.BusinessLayer
                 WorksInGalleryDto WorkItem = (WorksInGalleryDto) work;
                 res_html += "<tr><td><p>" + WorkItem.Id + "</p></td>";
                 // Если заполнено поле "Копия", то дописываем его к имени.
-                res_html += WorkItem.Work.Copy != string.Empty
-                    ? "<td><p>" + WorkItem.Work.Title + " (" + WorkItem.Work.Copy + ")" + "</p></td>"
-                    : "<td><p>" + WorkItem.Work.Title + "</p></td>";
+                res_html += WorkItem.Copy != string.Empty
+                    ? "<td><p>" + WorkItem.Work + " (" + WorkItem.Copy + ")" + "</p></td>"
+                    : "<td><p>" + WorkItem.Work + "</p></td>";
 
-                res_html += "<td><p>" + WorkItem.Artist.Name + "</p></td>";
+                res_html += "<td><p>" + WorkItem.Artist + "</p></td>";
                 res_html += "<td><p>" + WorkItem.AskingPrice + "</p></td>";
-                res_html += "<td><p>" + (WorkItem.Work.Description ?? "") + "</p></td></tr>";
+                res_html += "<td><p>" + (WorkItem.Description ?? "") + "</p></td></tr>";
             }
             res_html = rep.Replace("[VRA_TABLE_REPORT]", res_html);
             return res_html;

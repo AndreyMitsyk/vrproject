@@ -9,16 +9,22 @@ namespace Vra.DataAccess
     {
         private static WorkInGallery LoadWork(SqlDataReader reader)
         {
-            //Создаём пустой объект
+            //Создаём пустой объект.
             WorkInGallery work = new WorkInGallery
             {
                 Id = reader.GetInt32(reader.GetOrdinal("WorkID")),
-                WorkId = reader.GetInt32(reader.GetOrdinal("WorkID")),
-                ArtistId = reader.GetInt32(reader.GetOrdinal("ArtistID"))
+                Title = reader.GetString(reader.GetOrdinal("Title")),
+                Name = reader.GetString(reader.GetOrdinal("Name")),
             };
-
+            // Параметры, которые могут быть NULL.
             object tmp = reader["AskingPrice"];
             if (tmp != DBNull.Value) work.AskingPrice = Convert.ToDecimal(tmp);
+
+            tmp = reader["Copy"];
+            if (tmp != DBNull.Value) work.Copy = Convert.ToString(tmp);
+
+            tmp = reader["Description"];
+            if (tmp != DBNull.Value) work.Description = Convert.ToString(tmp);
 
             return work;
         }
@@ -31,7 +37,7 @@ namespace Vra.DataAccess
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT WorkID, ArtistID, AskingPrice FROM WorksInGallery";
+                    cmd.CommandText = "SELECT WorkID, Title, Copy, Name, AskingPrice, Description FROM WorksInGallery";
 
                     using (var dataReader = cmd.ExecuteReader())
                     {

@@ -234,9 +234,12 @@ namespace VRA.BusinessLayer.Converters
             WorksInGalleryDto workInGallery = new WorksInGalleryDto
             {
                 Id = worksInGallery.Id,
-                Work = Convert(DaoFactory.GetWorkDao().Get(worksInGallery.WorkId)),
-                Artist = Convert(DaoFactory.GetArtistDao().Get(worksInGallery.ArtistId)),
-                AskingPrice = worksInGallery.AskingPrice
+                Work = worksInGallery.Title,
+                Copy = worksInGallery.Copy,
+                Artist = worksInGallery.Name,
+                AskingPrice = worksInGallery.AskingPrice,
+                Description = worksInGallery.Description
+
             };
             return workInGallery;
         }

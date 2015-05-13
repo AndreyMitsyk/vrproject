@@ -74,13 +74,18 @@ namespace VRA
 
             foreach (WorksInGalleryDto works in FreeForSale)
             {
+                // Получаем художника.
+                var artists = ProcessFactory.GetArtistProcess().GetList();
+                ArtistDto WorkArtist = artists.FirstOrDefault(artist => artist.Name == works.Artist);
+                
+                // Создаем список работ.
                 forSale.Add(new WorkDto
                 {
-                    Artist = works.Artist,
-                    Copy = works.Work.Copy,
-                    Description = works.Work.Description,
-                    Id = works.Work.Id,
-                    Title = works.Work.Title
+                    Artist = WorkArtist,
+                    Copy = works.Copy,
+                    Description = works.Description,
+                    Id = works.Id,
+                    Title = works.Work
                 });
             }
             return forSale;

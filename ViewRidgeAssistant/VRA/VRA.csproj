@@ -41,10 +41,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -170,10 +167,6 @@
     <ProjectReference Include="..\VRA.BusinessLayer\VRA.BusinessLayer.csproj">
       <Project>{7972AAAE-7909-4AA5-9F1F-ED0C95E69F43}</Project>
       <Name>VRA.BusinessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vra.DataAccess\Vra.DataAccess.csproj">
-      <Project>{DC317844-E890-419A-83D2-F7920A0AF3C8}</Project>
-      <Name>Vra.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\VRA.Dto\VRA.Dto.csproj">
       <Project>{754C8142-61AD-44EB-B4AD-0AB31E5C0695}</Project>

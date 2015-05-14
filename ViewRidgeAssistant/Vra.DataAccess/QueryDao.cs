@@ -18,6 +18,8 @@ namespace Vra.DataAccess
             using (var conn = GetConnection())
             {
                 conn.Open();
+                if (!query.ToLower().Contains("select"))
+                    throw new Exception("Запрос не начинается с 'select'!");
                 DB = new SqlDataAdapter(query, conn);
                 DS.Reset();
                 DB.Fill(DS);

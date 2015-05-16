@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -690,6 +691,9 @@ namespace VRA
                 FileInfo xlsxFile = new FileInfo(saveXlsxDialog.FileName);
 
                 ProcessFactory.GetReport().fillExcelTableByType(grid, status, xlsxFile);
+
+                // Открываем сгенерированный файл.
+                Process.Start(saveXlsxDialog.FileName);
             }
         }
 
@@ -725,6 +729,9 @@ namespace VRA
                 StreamWriter sw = new StreamWriter(filename);
                 sw.WriteLine(full_rep);
                 sw.Close();
+
+                // Открываем сгенерированный файл.
+                Process.Start(filename);
             }
         }
 

@@ -1,7 +1,10 @@
 ﻿<Window x:Class="VRA.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="View Ridge Assistant" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="460" Width="600">
+        Title="View Ridge Assistant" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        MinHeight="460" MinWidth="460"
+        Height="460" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -67,7 +70,8 @@
                 <DataGridTextColumn Header="Запрашиваемая цена" Binding="{Binding Path=AskingPrice}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.ColumnSpan="3">
+        <Menu Height="25" HorizontalAlignment="Stretch" Name="mainMenu" VerticalAlignment="Top" Grid.Row="0"
+              Grid.ColumnSpan="3" Grid.Column="0">
             <MenuItem Name="DataBase" Header="База данных">
                 <MenuItem Name="dataBaseS" Header="Настроить соединение с имеющейся БД" Click="btnDatabase_Click"/>
             </MenuItem>
@@ -78,11 +82,11 @@
             </MenuItem>
             <MenuItem Name = "QueryButton" Header="Создать запрос" Click="QueryButton_Click" ></MenuItem>
         </Menu>
-        <StatusBar Name="statusBar" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="1,0"  VerticalAlignment="Bottom" Height="30">
+        <StatusBar Name="statusBar" Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0" HorizontalAlignment="Stretch" Margin="1,0"  VerticalAlignment="Bottom" Height="30">
             <Label Name ="statusLabel" Content="Работа с таблицей:" Visibility="Visible">
             </Label>
         </StatusBar>
-        <StackPanel Grid.Row="1" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
             <Button  HorizontalAlignment="Left"  Name="btCustomer"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnCustomer_Click">
                 <Button.Content>
                     <StackPanel >

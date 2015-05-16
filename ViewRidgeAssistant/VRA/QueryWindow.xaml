@@ -5,9 +5,9 @@
     <Grid VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*" />
-            <RowDefinition Height="210*" />
-            <RowDefinition Height="32" />
-            <RowDefinition Height="210*" />
+            <RowDefinition Height="102*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="320*" />
             <RowDefinition Height="0*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -15,8 +15,9 @@
             <ColumnDefinition Width="578*" />
             <ColumnDefinition Width="0" />
         </Grid.ColumnDefinitions>
-        <Button Content="Выполнить" Name="btnQuery" Click="btnQuery_Click" Grid.Column="1" Grid.Row="2" />
-        <TextBox Name="tbQuery" Grid.Row="1" Grid.Column="1" />
-        <DataGrid AutoGenerateColumns="True" Name="dgResult" Grid.Row="3" Grid.Column="1" IsReadOnly="True" />
+        <Button Content="Выполнить" Name="btnQuery" Click="btnQuery_Click" Grid.Column="1" Grid.Row="3" Height="32" VerticalAlignment="Top" />
+        <TextBox Name="tbQuery" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" />
+        <DataGrid AutoGenerateColumns="True" Name="dgResult" Grid.Row="3" Grid.Column="1" IsReadOnly="True" Margin="0,32,0,0" />
+        <GridSplitter Grid.Column="1" Grid.Row="2" Name="gridSplitter" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="5" />
     </Grid>
 </Window>

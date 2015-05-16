@@ -33,9 +33,9 @@
         <DatePicker Height="25" HorizontalAlignment="Left" Margin="46,63,0,0" Name="datePicker2" VerticalAlignment="Top" Width="115" Grid.Column="1" Grid.Row="2" />
         <StackPanel Grid.Column="1" Grid.Row="3" Height="95" HorizontalAlignment="Left" Margin="7,8,0,0" Name="stackPanel3" VerticalAlignment="Top" Width="154">
             <TextBlock TextAlignment="Center" FontStyle="Italic"> С шагом :</TextBlock>
-            <RadioButton Content="День" Height="16" Name="radioDay" Margin="3" IsChecked="True" />
+            <RadioButton Content="День" Height="16" Name="radioDay" Margin="3" />
             <RadioButton Content="Месяц" Height="16" Name="radioMounth" Margin="3" />
-            <RadioButton Content="Год" Height="16" Name="radioYear" Margin="3" />
+            <RadioButton Content="Год" Height="16" Name="radioYear" Margin="3" IsChecked="True"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Height="33" HorizontalAlignment="Right" Name="stackPanel4" VerticalAlignment="Bottom" Width="76" Orientation="Horizontal">
             <Button Content="Принять" Height="23" Name="btn_accept" Width="75" FlowDirection="LeftToRight" Click="btn_accept_Click" />

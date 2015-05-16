@@ -50,6 +50,12 @@ namespace VRA
             chart.Series["Купленные"].Legend = "Legend";
             chart.Series["Купленные"].IsVisibleInLegend = false;
             chart.Series["Проданные"].IsVisibleInLegend = false;
+
+            // Загрузка данных по умолчанию.
+            IList<TransactionDto> transaction = ProcessFactory.GetTransactionProcess().GetList();
+            datePicker1.Text = transaction[0].DateAcquired.ToString();
+            datePicker2.Text = transaction[transaction.Count - 1].DateAcquired.ToString();
+            btn_accept_Click(sender, e);
         }
 
         /// <summary>
@@ -124,7 +130,7 @@ namespace VRA
                     {
                         MessageBox.Show(
                             "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 30 дней ");
-                        return;
+                        datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddDays(30).ToString();
                     }
 
                     collection.Clear();
@@ -140,7 +146,7 @@ namespace VRA
                     {
                         MessageBox.Show(
                             "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 12 месяцев ");
-                        return;
+                        datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddMonths(12).ToString();
                     }
 
                     collection.Clear();
@@ -156,7 +162,7 @@ namespace VRA
                     {
                         MessageBox.Show(
                             "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 лет ");
-                        return;
+                        datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddYears(10).ToString();
                     }
 
 
@@ -184,7 +190,7 @@ namespace VRA
                     {
                         MessageBox.Show(
                             "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 30 дней ");
-                        return;
+                        datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddDays(30).ToString();
                     }
 
                     collection.Clear();
@@ -200,7 +206,7 @@ namespace VRA
                     {
                         MessageBox.Show(
                             "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 12 месяцев ");
-                        return;
+                        datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddMonths(12).ToString();
                     }
 
                     collection.Clear();
@@ -217,7 +223,7 @@ namespace VRA
                     {
                         MessageBox.Show(
                             "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 лет ");
-                        return;
+                        datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddYears(10).ToString();
                     }
 
 

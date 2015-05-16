@@ -120,10 +120,10 @@ namespace VRA
                 {
                     TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
-                    if (ts.Days > 10)
+                    if (ts.Days > 30)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 30 дней ");
                         return;
                     }
 
@@ -136,10 +136,10 @@ namespace VRA
                 {
                     TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
-                    if (ts.Days/30 > 10)
+                    if (ts.Days/30 > 12)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 месяцев ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 12 месяцев ");
                         return;
                     }
 
@@ -180,10 +180,10 @@ namespace VRA
                 {
                     TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
-                    if (ts.Days > 10)
+                    if (ts.Days > 30)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 дней ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 30 дней ");
                         return;
                     }
 
@@ -196,10 +196,10 @@ namespace VRA
                 {
                     TimeSpan ts = (Convert.ToDateTime(datePicker2.Text)).Subtract(Convert.ToDateTime(datePicker1.Text));
 
-                    if (ts.Days/30 > 10)
+                    if (ts.Days/30 > 12)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 месяцев ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 12 месяцев ");
                         return;
                     }
 

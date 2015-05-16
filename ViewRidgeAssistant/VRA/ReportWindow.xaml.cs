@@ -129,7 +129,7 @@ namespace VRA
                     if (ts.Days > 30)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 30 дней ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длина периода - 30 дней ");
                         datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddDays(30).ToString();
                     }
 
@@ -145,7 +145,7 @@ namespace VRA
                     if (ts.Days/30 > 12)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 12 месяцев ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длина периода - 12 месяцев ");
                         datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddMonths(12).ToString();
                     }
 
@@ -161,7 +161,7 @@ namespace VRA
                     if (ts.Days/(30*12) > 10)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 лет ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длина периода - 10 лет ");
                         datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddYears(10).ToString();
                     }
 
@@ -189,7 +189,7 @@ namespace VRA
                     if (ts.Days > 30)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 30 дней ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длина периода - 30 дней ");
                         datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddDays(30).ToString();
                     }
 
@@ -205,7 +205,7 @@ namespace VRA
                     if (ts.Days/30 > 12)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 12 месяцев ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длина периода - 12 месяцев ");
                         datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddMonths(12).ToString();
                     }
 
@@ -222,7 +222,7 @@ namespace VRA
                     if (ts.Days/(30*12) > 10)
                     {
                         MessageBox.Show(
-                            "Выбранный Вами период времени слишком велик! \n Максимальная длинна периода - 10 лет ");
+                            "Выбранный Вами период времени слишком велик! \n Максимальная длина периода - 10 лет ");
                         datePicker2.Text = Convert.ToDateTime(datePicker1.Text).Date.AddYears(10).ToString();
                     }
 

@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="View Ridge Assistant" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        MinHeight="460" MinWidth="460"
-        Height="460" Width="600">
+        MinHeight="407" MinWidth="700"
+        Height="407" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -152,7 +152,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical">
-            <Button  HorizontalAlignment="Left"  Name="btnAdd"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnAdd_Click">
+            <Button  HorizontalAlignment="Left"  Name="btnAdd"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnAdd_Click" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Width="30" Source="/VRA;component/Images/Add.ico"></Image>
@@ -163,7 +163,7 @@
                     <TextBlock>Добавить объект</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button Height="52" Width="70" Name="btnPurchase" VerticalAlignment="Top" Click="btnPurchase_Click" HorizontalAlignment="Left">
+            <Button Height="52" Width="70" Name="btnPurchase" VerticalAlignment="Top" Click="btnPurchase_Click" HorizontalAlignment="Left" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Source="/VRA;component/Images/Purchase.ico" Width="30"></Image>
@@ -175,7 +175,7 @@
                     <TextBlock>Купить картину</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button Height="52" Width="70" Name="btnSale" VerticalAlignment="Top" Click="btnSale_Click" HorizontalAlignment="Left">
+            <Button Height="52" Width="70" Name="btnSale" VerticalAlignment="Top" Click="btnSale_Click" HorizontalAlignment="Left" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Source="/VRA;component/Images/Sale.ico" Width="30"></Image>
@@ -187,7 +187,7 @@
                     <TextBlock>Продать картину</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button  HorizontalAlignment="Left"  Name="btnEdit"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnEdit_Click">
+            <Button  HorizontalAlignment="Left"  Name="btnEdit"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnEdit_Click" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Width="30" Source="/VRA;component/Images/Edit.ico"></Image>
@@ -198,7 +198,7 @@
                     <TextBlock>Изменить объект</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button  HorizontalAlignment="Left"  Name="btnDelete"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnDelete_Click">
+            <Button  HorizontalAlignment="Left"  Name="btnDelete"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnDelete_Click" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Width="30" Source="/VRA;component/Images/Delete.ico"></Image>
@@ -209,7 +209,7 @@
                     <TextBlock>Удалить объект</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button  HorizontalAlignment="Left"  Name="btnRefresh"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnRefresh_Click">
+            <Button  HorizontalAlignment="Left"  Name="btnRefresh"  VerticalAlignment="Top" Height="52" Width="70"  Click="btnRefresh_Click" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Width="30" Source="/VRA;component/Images/Refresh.ico"></Image>
@@ -220,7 +220,7 @@
                     <TextBlock>Обновить объект</TextBlock>
                 </Button.ToolTip>
             </Button>
-            <Button  Height="52" Width="70" HorizontalAlignment="Left"  Name="btnSearch" VerticalAlignment="Top" Click ="btnSearchClick" >
+            <Button  Height="52" Width="70" HorizontalAlignment="Left"  Name="btnSearch" VerticalAlignment="Top" Click ="btnSearchClick" Visibility="Collapsed">
                 <Button.Content>
                     <StackPanel>
                         <Image Width="30" Source="/VRA;component/Images/Search.ico"></Image>

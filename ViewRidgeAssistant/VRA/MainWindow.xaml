@@ -4,7 +4,7 @@
         Title="View Ridge Assistant" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         MinHeight="407" MinWidth="700"
-        Height="407" Width="700">
+        Height="407" Width="700" Icon="HP-Pictures-Folder-icon.ico" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />

@@ -4,7 +4,7 @@
         xmlns:wf="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
 
 
-    Title="Графический отчет" MinHeight="500" MinWidth="800"  Height="500" Width="800" Loaded="Window_Loaded">
+    Title="Графический отчет" MinHeight="500" MinWidth="800"  Height="500" Width="800" Loaded="Window_Loaded" Icon="HP-Pictures-Folder-icon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

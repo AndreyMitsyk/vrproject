@@ -150,7 +150,7 @@ namespace VRA
 
             if (status == "sale")
             {
-                if (workAtGalery(SelectedWork))
+                if (!workAtGalery(SelectedWork))
                 {
                     MessageBox.Show("Запрашиваемая работа уже продана!"); return;
                 }

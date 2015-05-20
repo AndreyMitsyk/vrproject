@@ -26,5 +26,18 @@
         /// Copy of work, may be null
         /// </summary>
         public string Copy { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            WorkDto workItem = obj as WorkDto;
+            return workItem != null && workItem.Id.Equals(this.Id);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Id.GetHashCode();
+        }
     }
 }

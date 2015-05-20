@@ -751,7 +751,7 @@ namespace VRA
         private void AboutButton_Click(object sender, RoutedEventArgs e)
         {
             var window = new AboutWindow();
-            window.Show();
+            window.ShowDialog();
         }
     }
 }

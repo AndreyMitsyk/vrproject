@@ -5,8 +5,8 @@
     Title="View Ridge"
     Height="400"
     Width="300"
-    MinHeight="160"
-    MinWidth="260"
+    MinHeight="400"
+    MinWidth="300"
     Icon="/HP-Pictures-Folder-icon.ico"
     Style="{StaticResource VS2012WindowStyle}" ResizeMode="NoResize" MaxWidth="300" MaxHeight="400">
     <DockPanel>
@@ -21,7 +21,7 @@
         <TextBlock TextWrapping="Wrap" Margin="3,0" Width="277">
             <LineBreak></LineBreak>
                 Приложение для учета покупок и продаж картин в галерее View Ridge.<LineBreak></LineBreak><LineBreak></LineBreak>
-                Разработано в качестве курсового проекта по дисциплине Управление данными<LineBreak></LineBreak>
+                Разработано в качестве курсового проекта по дисциплине "Управление данными".<LineBreak></LineBreak>
                 Проект разработан с использоваванием материалов книги Д. Крёнке - Теория и практика построения баз данных.<LineBreak></LineBreak><LineBreak></LineBreak>
                 Руководитель проекта: Эдуард Галиаскаров<LineBreak></LineBreak><LineBreak></LineBreak>
                 Разработчики:<LineBreak></LineBreak> Андрей Блинчиков,<LineBreak></LineBreak> Алексей Хоченков,<LineBreak></LineBreak> Александр Крылов, <LineBreak></LineBreak> Алексей Кострома, <LineBreak></LineBreak> Мицык Андрей.

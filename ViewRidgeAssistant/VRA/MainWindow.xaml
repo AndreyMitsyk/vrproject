@@ -55,6 +55,9 @@
                 <DataGridTextColumn Header="Автор" Binding="{Binding Path=Artist.Name}" />
                 <DataGridTextColumn Header="Копия" Binding="{Binding Path=Copy}" />
                 <DataGridTextColumn Header="Описание" Binding="{Binding Path=Description}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding Path=Status}" />
+                <DataGridTextColumn Header="Запрашиваемая цена" Binding="{Binding Path=AskingPrice}" />
+                <DataGridTextColumn Header="Цена продажи" Binding="{Binding Path=SalesPrice}" />
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid x:Name="dgTrans" Grid.Row="1" Grid.Column="1" IsReadOnly="True" AutoGenerateColumns="False" Visibility="Hidden">

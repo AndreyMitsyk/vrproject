@@ -480,7 +480,7 @@ namespace VRA
         {
             AddWorkWindow window = new AddWorkWindow();
             window.ShowDialog();
-            dgWork.ItemsSource = ProcessFactory.GetWorkProcess().GetList();
+            btnRefreshW_Click();
         }
 
         private void btnEditW_Click()
@@ -501,7 +501,46 @@ namespace VRA
 
         private void btnRefreshW_Click()
         {
-            dgWork.ItemsSource = ProcessFactory.GetWorkProcess().GetList();
+            IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
+            List<WorkDto> WorksStatus = new List<WorkDto>();
+
+            IList<TransactionDto> Trans = ProcessFactory.GetTransactionProcess().GetList();
+            IList<TransactionDto> TransNoRepeat = new List<TransactionDto>();
+
+            List<int> Id = new List<int>();
+
+            TransNoRepeat.Add(Trans[Trans.Count - 1]);
+            Id.Add(Trans[Trans.Count - 1].Work.Id);
+
+            for (int i = Trans.Count - 1; i >= 0; i--)
+            {
+                if (!Id.Contains(Trans[i].Work.Id))
+                {
+                    TransNoRepeat.Add(Trans[i]);
+                    Id.Add(Trans[i].Work.Id);
+                }
+            }
+
+            for (int i = 0; i < Works.Count; i++)
+            {
+                for (int j = 0; j < TransNoRepeat.Count; j++)
+                {
+                    if (Works[i].Id == TransNoRepeat[j].Work.Id)
+                    {
+                        if (TransNoRepeat[j].Customer == null)
+                            Works[i].Status = "Куплена";
+                        else
+                            Works[i].Status = "Продана";
+
+                        Works[i].AskingPrice = TransNoRepeat[j].AskingPrice;
+                        Works[i].SalesPrice = TransNoRepeat[j].SalesPrice;
+
+                        WorksStatus.Add(Works[i]);
+                        break;
+                    }
+                }
+            }
+            dgWork.ItemsSource = WorksStatus;
         }
 
         private void btnDeleteW_Click()
@@ -746,12 +785,12 @@ namespace VRA
             var window = new QueryWindow();
             window.Show();
         }
-        #endregion
 
         private void AboutButton_Click(object sender, RoutedEventArgs e)
         {
             var window = new AboutWindow();
             window.ShowDialog();
         }
+        #endregion
     }
 }

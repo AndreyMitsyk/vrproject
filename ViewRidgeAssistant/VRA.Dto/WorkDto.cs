@@ -39,5 +39,9 @@
         {
             return this.Id.GetHashCode();
         }
+
+        public string Status { get; set; }
+        public decimal? SalesPrice { get; set; }
+        public decimal? AskingPrice { get; set; }
     }
 }

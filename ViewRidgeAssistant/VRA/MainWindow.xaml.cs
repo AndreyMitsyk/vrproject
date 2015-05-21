@@ -521,21 +521,18 @@ namespace VRA
                 }
             }
 
-            for (int i = 0; i < Works.Count; i++)
+            foreach (WorkDto work in Works)
             {
-                for (int j = 0; j < TransNoRepeat.Count; j++)
+                foreach (TransactionDto trans in TransNoRepeat)
                 {
-                    if (Works[i].Id == TransNoRepeat[j].Work.Id)
+                    if (work.Id == trans.Work.Id)
                     {
-                        if (TransNoRepeat[j].Customer == null)
-                            Works[i].Status = "Куплена";
-                        else
-                            Works[i].Status = "Продана";
+                        work.Status = trans.Customer == null ? "Куплена" : "Продана";
 
-                        Works[i].AskingPrice = TransNoRepeat[j].AskingPrice;
-                        Works[i].SalesPrice = TransNoRepeat[j].SalesPrice;
+                        work.AskingPrice = trans.AskingPrice;
+                        work.SalesPrice = trans.SalesPrice;
 
-                        WorksStatus.Add(Works[i]);
+                        WorksStatus.Add(work);
                         break;
                     }
                 }

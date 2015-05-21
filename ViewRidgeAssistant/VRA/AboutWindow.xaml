@@ -24,7 +24,11 @@
                 Разработано в качестве курсового проекта по дисциплине "Управление данными".<LineBreak></LineBreak>
                 Проект разработан с использоваванием материалов книги Д. Крёнке - Теория и практика построения баз данных.<LineBreak></LineBreak><LineBreak></LineBreak>
                 Руководитель проекта: Эдуард Галиаскаров<LineBreak></LineBreak><LineBreak></LineBreak>
-                Разработчики:<LineBreak></LineBreak> Андрей Блинчиков,<LineBreak></LineBreak> Алексей Хоченков,<LineBreak></LineBreak> Александр Крылов, <LineBreak></LineBreak> Алексей Кострома, <LineBreak></LineBreak> Мицык Андрей.
+                Разработчики:
+            <LineBreak></LineBreak> Андрей Блинчиков - архитектура проекта,
+            <LineBreak></LineBreak> Александр Крылов - первая версия проекта,
+            <LineBreak></LineBreak> Алексей Хоченков - вторая версия проекта, 
+            <LineBreak></LineBreak> Алексей Кострома, Андрей Мицык - доработка и рефакторинг проекта.
         </TextBlock>
     </DockPanel>
 </Window>

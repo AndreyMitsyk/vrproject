@@ -364,7 +364,7 @@ namespace VRA
             window.ShowDialog();
 
             //Получаем список художников и передаем его на отображение таблице
-            dgArtists.ItemsSource = ProcessFactory.GetArtistProcess().GetList();
+            btnRefreshA_Click();
         }
 
         private void btnDeleteA_Click()
@@ -423,7 +423,7 @@ namespace VRA
         {
             AddCustomerWindow window = new AddCustomerWindow();
             window.ShowDialog();
-            dgCustomers.ItemsSource = ProcessFactory.GetCustomerProcess().GetList();
+            btnRefreshC_Click();
         }
 
         private void btnEditC_Click()
@@ -501,43 +501,50 @@ namespace VRA
 
         private void btnRefreshW_Click()
         {
-            IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
-            List<WorkDto> WorksStatus = new List<WorkDto>();
-
-            IList<TransactionDto> Trans = ProcessFactory.GetTransactionProcess().GetList();
-            IList<TransactionDto> TransNoRepeat = new List<TransactionDto>();
-
-            List<int> Id = new List<int>();
-
-            TransNoRepeat.Add(Trans[Trans.Count - 1]);
-            Id.Add(Trans[Trans.Count - 1].Work.Id);
-
-            for (int i = Trans.Count - 1; i >= 0; i--)
+            try
             {
-                if (!Id.Contains(Trans[i].Work.Id))
-                {
-                    TransNoRepeat.Add(Trans[i]);
-                    Id.Add(Trans[i].Work.Id);
-                }
-            }
+                IList<WorkDto> Works = ProcessFactory.GetWorkProcess().GetList();
+                List<WorkDto> WorksStatus = new List<WorkDto>();
 
-            foreach (WorkDto work in Works)
-            {
-                foreach (TransactionDto trans in TransNoRepeat)
+                IList<TransactionDto> Trans = ProcessFactory.GetTransactionProcess().GetList();
+                IList<TransactionDto> TransNoRepeat = new List<TransactionDto>();
+                
+                if (Works == null | Trans == null)
+                    throw new Exception();
+
+                List<int> Id = new List<int>();
+
+                TransNoRepeat.Add(Trans[Trans.Count - 1]);
+                Id.Add(Trans[Trans.Count - 1].Work.Id);
+
+                for (int i = Trans.Count - 1; i >= 0; i--)
                 {
-                    if (work.Id == trans.Work.Id)
+                    if (!Id.Contains(Trans[i].Work.Id))
                     {
-                        work.Status = trans.Customer == null ? "Куплена" : "Продана";
-
-                        work.AskingPrice = trans.AskingPrice;
-                        work.SalesPrice = trans.SalesPrice;
-
-                        WorksStatus.Add(work);
-                        break;
+                        TransNoRepeat.Add(Trans[i]);
+                        Id.Add(Trans[i].Work.Id);
                     }
                 }
+
+                foreach (WorkDto work in Works)
+                {
+                    foreach (TransactionDto trans in TransNoRepeat)
+                    {
+                        if (work.Id == trans.Work.Id)
+                        {
+                            work.Status = trans.Customer == null ? "Куплена" : "Продана";
+
+                            work.AskingPrice = trans.AskingPrice;
+                            work.SalesPrice = trans.SalesPrice;
+
+                            WorksStatus.Add(work);
+                            break;
+                        }
+                    }
+                }
+                dgWork.ItemsSource = WorksStatus;
             }
-            dgWork.ItemsSource = WorksStatus;
+            catch (Exception) { }
         }
 
         private void btnDeleteW_Click()
@@ -614,7 +621,7 @@ namespace VRA
         {
             AddInterestWindow window = new AddInterestWindow();
             window.ShowDialog();
-            this.dgInterests.ItemsSource = ProcessFactory.GetInterestsProcess().GetList();
+            btnRefreshI_Click();
         }
 
         private void btnDeleteI_Click()
@@ -649,7 +656,7 @@ namespace VRA
         {
             AddNationWindow window = new AddNationWindow();
             window.ShowDialog();
-            this.btnRefreshN_Click();
+            btnRefreshN_Click();
         }
 
         private void btnRefreshN_Click()

@@ -111,7 +111,7 @@ namespace VRA
                 workProcess.Add(work);
                 FreeForSale = ProcessFactory.GetWorkProcess().GetList();
                 transaction.Work = FreeForSale.Last();
-                transProcess.Add(transaction);
+                transProcess.Update(transaction);
             }
             else
             {
